@@ -1,0 +1,371 @@
+#header
+{
+    height: 70px;
+    font-size: 20px;
+    margin-bottom:0px;
+}
+#sec1
+{
+    
+    height: auto;
+}
+#quote
+{
+        
+    font-size: 45px;
+    //margin: 50px;
+    text-align: center;
+    color: black;
+    font-family: 'Lobster', cursive;
+}
+#sec1_left
+{
+    //border: solid;
+    width: 600px;
+    float: left;
+}
+#sec1_con
+{
+    //border: solid;
+    height: auto;
+}
+#myCarousel
+{
+    height: 350px;
+    width: 100%;
+    float: left;
+    margin-left: 0px;
+}
+#myCarousel img
+{
+    height: 350px;
+    width: 100%;
+}
+#sec1_right
+{
+    width: 770px;
+    height: 360px;
+    float : right;
+    //border: solid;
+}
+
+.mapael .map 
+{
+    position: relative;
+}
+.mapael .mapTooltip 
+{
+    position: absolute;
+    background-color: #fff;
+    moz-opacity: 0.70;
+    pacity: 0.70;
+    filter: alpha(opacity=70);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+    max-width: 200px;
+    display: none;
+    color: #343434;
+}
+#search
+{
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    border: solid;
+    margin-top: 0px;
+    background-image: url('images/bgt1.jpg');
+}
+#search-bar
+{
+    margin: 20px 20px 20px 20px;
+    width:60%;
+}
+#sec2_right
+{
+    float: right;
+    //border: solid;
+    width: 30%;
+    height:auto;
+}
+#sec2
+{
+    //border: solid;
+    height: 1800px;
+    width: 100%;
+}
+
+#card img
+{
+    height: 150px;
+    width: 200px;
+}
+#sec2_left
+{
+    float: left;
+   //border: solid red;
+    width: 70%;
+    height: auto;
+}
+.description
+{
+   // border: solid;
+    
+   margin-left: 20px;
+    height:370px;
+    
+}
+.des_img
+{
+    //border:solid;
+    width: 290px;
+    box-shadow: 10px 10px 10px 10px grey;
+    background-image: url('images/bg5.jpg');
+    padding: 15px;
+    margin-top: -300px;    
+}
+.des_cont
+{
+    background-image: url('images/bg3.jpg');
+    height: 200px;
+    width: 85%;
+    margin-top: 120px;
+    margin-left: 90px;
+    padding-top: 20px;
+    box-shadow: 10px 10px 5px grey;
+}
+#btn
+        {
+             background-color: white;
+             opacity: 5%;
+             color: black;
+             border : black 2px solid;
+             /*width: 100px;
+             height: 30px;
+             margin-top: 10px;*/
+             border-radius: 15px; 
+        }
+.image
+{
+    height: 240px;
+    width: 210px;
+}
+#latestp
+{
+    padding: 20px;
+}
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 230px;;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.overlay {
+  opacity: 1;}
+
+/*modal */
+       .modal {
+           display: none; /* Hidden by default */
+           position: fixed; /* Stay in place */
+           z-index: 2; /* Sit on top */
+           left: 0;
+           top: 0;
+           width: 100%; /* Full width */
+           height: 100%; /* Full height */
+           overflow: auto; /* Enable scroll if needed */
+           background-color: rgb(0,0,0); /* Fallback color */
+           background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+           padding-top: 30px;
+		   margin-bottom:20px;
+         }
+
+         /* Modal Content/Box */
+         .modal-content {
+           background-color: #fefefe;
+           margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+           border: 1px solid #888;
+           width: 80%; /* Could be more or less, depending on screen size */
+         }
+         /* The Close Button (x) */
+        .close {
+          position: absolute;
+          right: 25px;
+          top: 0;
+          color: #000;
+          font-size: 35px;
+          font-weight: bold;
+          margin: 10px;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: red;
+          cursor: pointer;
+        }
+        .form-control
+        {
+            width: 60%;
+            border: none;
+            
+        }
+        #popup
+        {
+            //border: solid;
+            height: 500px;
+            padding: 50px;
+        }
+         #popup2
+        {
+            //border: solid;
+            height: 700px;
+            padding: 50px;
+        }
+        #leftpopup
+        {
+            //border: solid;
+            width:40%;
+            float:left;
+            height: auto;
+        }
+           #rightpopup1
+        {
+             //border: solid;
+            width:40%;
+            float:left;
+            height: auto;
+            margin-left: 80px; 
+            margin-top: 200px;
+        }
+        #rightpopup
+        {
+             //border: solid;
+            width:40%;
+            float:left;
+            height: auto;
+            margin-left: 80px; 
+        }
+        #leftpopup1
+        {
+            width:40%;
+            float:left;
+            height: auto;
+            margin-left: 80px;  
+        }
+        #popupbtn
+        {
+             background-color: black;
+             color: white;
+             border : black 2px solid;
+             width: 100px;
+             height: 30px;
+             margin-top: 10px;
+             border-radius: 15px; 
+        }
+        #popupbtn:hover
+        {
+            background-color: white;
+            color: black;
+        }
+        
+ul 
+{
+   list-style-type:none;
+}
+        
+        
+/* -------------------- ABOUT PAGE CSS ----------------------- */
+
+#sec2_ab
+{
+    margin-top: 60px;
+   
+}
+#pic_right
+{
+    float:left;
+    margin-top: 60px;
+    width: 15%;
+   
+    background-image: url('images/bg3.jpg');
+}
+#pic_right img
+{
+    box-shadow: 5px 5px 5px 5px grey;
+    margin-top: 60px;
+     width: 432px;
+    height: 315px;
+   
+}
+#con_left
+{
+    margin-top: 60px;
+    float:left;
+    background-image: url('images/bg3.jpg');
+    /*margin-left: -200px;*/
+    width:45%;
+    padding: 40px;
+    font-size: 18px;
+}
+#sec3_ab
+{
+    /*margin-top: 60px;*/
+
+}
+#con_right
+{
+    float:right;
+    background-image: url('images/bg3.jpg');
+    margin-top: 60px;
+    margin-right: 206px;
+    width:45%;
+    padding: 40px;
+    font-size: 18px;
+}
+#pic_left
+{
+    float:left;
+    width: 15%;
+    height: 400px;
+    margin-top: -90px;
+    margin-left: 250px;
+    margin-bottom: 150px;
+    background-image: url('images/bg3.jpg');
+    padding: 0px;
+    
+}
+#pic_left img
+{
+    box-shadow: 5px 5px 5px 5px grey;
+    margin-bottom:60px;
+    float:right;
+    width: 432px;
+    height: 315px;
+}
+
+/* LOGIN PAGE CSS.................................................*/
+
+.left
+{
+	float:float;
+	width:50%;
+	border:black solid;
+}
+input[type=password]
+{
+	width:50%;
+}
+.right
+{
+	float:float;
+}
