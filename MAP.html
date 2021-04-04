@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Multiple projection example</title>
+    <style type="text/css">
+        body {
+            color: #5d5d5d;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .mapael .map {
+            position: relative;
+        }
+
+        .mapael .mapTooltip {
+            position: absolute;
+            background-color: #fff;
+            moz-opacity: 0.70;
+            opacity: 0.70;
+            filter: alpha(opacity=70);
+            border-radius: 10px;
+            padding: 10px;
+            z-index: 1000;
+            max-width: 200px;
+            display: none;
+            color: #343434;
+        }
+        #map
+        {
+            height: 800px;
+            width: 500px;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
+            charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js" charset="utf-8"></script>
+    <script src="jquery.mapael.js" charset="utf-8"></script>
+    <script src="maps/france_departments.js" charset="utf-8"></script>
+    <script src="maps/world_countries.js" charset="utf-8"></script>
+    <script src="maps/usa_states.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        $(function () 
+        {
+            
+         
+
+            var getElemID = function(elem) {
+                // Show element ID
+                return $(elem.node).attr("data-id");
+            };
+
+            $(".mapcontainer_equi").mapael({
+                map: {
+                    name: "france_departments",
+                    defaultArea: {
+                        tooltip: {
+                            content: getElemID
+                        }
+                    }
+                }
+               
+            });
+
+        
+        });
+    </script>
+
+</head>
+
+<body>
+<center>
+    <div id="map">
+        <div class="container">
+    
+    <div class="mapcontainer_equi">
+        <div class="map">
+            <span>Alternative content for the map</span>
+        </div>
+    </div>
+
+</div>
+</center>
+
+    </div>
+</body>
+</html>

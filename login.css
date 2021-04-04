@@ -1,0 +1,52 @@
+body
+{
+	font-family: Poppins; 
+}
+.main
+{
+	padding:90px;
+	background: #f8f8f8;
+}
+.container
+{
+	padding:40px;
+	border-radius:15px;
+	width:80%;
+	background-color:#fff;
+}
+.col-sm-6
+{
+	padding:50px;
+	background-color:white;
+	width:50%;
+}
+#left
+{
+	padding-left:20px;
+}
+input[type=text],input[type=password],#country {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border:none;
+  border-bottom:solid 1px;
+  font-size:15px;
+}
+
+input[type=submit] {
+  width: 30%;
+  border:black solid;
+	background-color:black;
+	color:white;
+  font-size:15px;
+  padding:5px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:white;
+	color:black;
+	border:black solid;

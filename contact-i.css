@@ -1,0 +1,64 @@
+
+.sub-main{
+	padding-top:100px;
+	background:black;
+	box-shadow:1px 1px 1px 50px #cfcccc;
+	border-radius:15px;
+	margin-top:100px;
+	
+}
+.personal-row
+{
+	display:flex;
+	height:50px;
+	justify-content:space-around;
+}
+.don-head
+{
+	width:100%;
+	
+}
+.form
+{
+	padding:100px;
+	width:60%;
+	position: relative;
+}
+  input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  border:black solid;
+	background-color:black;
+	color:white;
+  font-size:20px;
+  padding:5px;
+  margin: 8px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:white;
+	color:black;
+	border:black solid;
+}
+input[type=text],input[type=email],input[type=number]
+{
+  width: 48%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+--><html>
+    <head>
+        <title>Tours | Home</title>
+        
+    
+        
+        <link href='https://fonts.googleapis.com/css2?family=Lobster&display=swap' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&display=swap' rel='stylesheet'>
+		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+        
+        <link href='css.css' rel='stylesheet'>
+        
+         <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css' rel='stylesheet'>
+            <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+            <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+            
+            <script src='https://unpkg.com/ionicons@5.2.3/dist/ionicons.js'></script>
+            
+          
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' charset='utf-8'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js'
+            charset='utf-8'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js' charset='utf-8'></script>  
+
+ 
+      <script>
+            // toggle between login and signup
+             $(document).ready(function()
+	   {
+	     $('#id01').hide();
+                    $('#id01 a,#id02 a').click(function(){
+                        $('#id01,#id02').toggle();
+             });     
+             var getElemID = function(elem) {
+                // Show element ID
+                return $(elem.node).attr('data-id');
+            };
+            $('.mapcontainer_equi').mapael({
+                map: {
+                    name: 'world_countries',
+                    defaultArea: {
+                        tooltip: {
+                            content: getElemID
+                        }
+                    }
+                }
+            });
+		  
+	   });
+            // Get the modal
+            var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            };
+            
+            </script>
+    </head>
+    <body >
+        <div id='maindiv' style='height: 2500px;'>
+                 <!-- ------ HEADER START -------- -->
+            
+            <div id='header'>   
+                <nav class='navbar navbar-inverse'>
+                    <div class='container-fluid'>
+                        <div class='navbar-header'>
+                            <a class='navbar-brand' href='index.html'>TOURS</a>
+                            <button type='button' class='navbar-toggle' data-toggle='collapse'
+                                                data-target='#mymenu'>                  
+                            <span class='icon-bar'></span>
+                            <span class='icon-bar'></span>
+                            <span class='icon-bar'></span>
+                            </button>
+                        </div>
+                        <div class='collapse navbar-collapse' id='mymenu'>
+                            <ul class='nav navbar-nav navbar-right'>
+                                <li><a href='index.html'>Home</a></li>
+                                <li><a href='about.html'>About</a></li>
+                                <li class='dropdown'>
+                                    <a href='#' class='dropdown-toggle' data-toggle='dropdown'>
+                                    Destinations
+                                    <span class='caret'></span></a>
+                                        <ul class='dropdown-menu'>
+                                            <li><a href='#'>Explore</a></li>
+                                            <li><a href='#'>Popular</a>
+                                                <ul>
+                                                    <li><a href='wildlife.html'>Wildlife</a></li>
+                                                    <li>Pilgrimage</li>
+                                                    <li>Trekking</li>
+                                                </ul>
+                                            </li>
+                                            <li><a href='#'>Customized</a></li>
+                                        </ul> 
+                                </li>
+                                <li><a href='contact.html'>Contact</a></li>
+                                <li>
+                                    <a href='#' onclick='document.getElementById('id01').style.display='block''>
+                                        <span class='glyphicon glyphicon-user'></span> Login
+                                    </a>
+                                </li>
+                                         
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        <!--sign up-->
+         <div id='id02' class='modal'>
+            
+            <div class='modal-content animate container-inverse ' id='popup2'>
+               
+                <span onclick='document.getElementById('id02').style.display='none'' 
+                  class='close' title='Close Modal'>&times;</span>
+                
+                  <div id='leftpopup1'>
+                      <h2><b>Sign up</b></h2>
+                    <form>
+                     <div class='form-group'>
+                      <label for='InputName'></label>
+                      <input type='text' class='form-control' id='InputName' placeholder='Enter Name'>
+                    </div>
+                    <div class='form-group'>
+                      <label for='InputUsername'></label>
+                      <input type='text' class='form-control' id='InputUsername' placeholder='Enter username'>
+                    </div>
+                    <div class='form-group'>
+                      <label for='InputPassword'></label>
+                      <input type='password' class='form-control' id='InputPassword' placeholder='Password'>
+                    </div>
+                        <div class='form-group'>
+                      <label for='reInputPassword'></label>
+                      <input type='password' class='form-control' id='reInputPassword' placeholder='Confirm Password'>
+                    </div>
+                        <div class='form-group'>
+                      <label for='country'></label>
+                      <select name='country' id='country' class='form-control'>
+                         <option value='0' label='Select a country ... ' selected='selected'>Select a country ... </option>
+                      
+                        <optgroup id='country-optgroup-Americas' label='Americas'>
+                            <option value='AI' label='Anguilla'>Anguilla</option>
+                            <option value='AG' label='Antigua and Barbuda'>Antigua and Barbuda</option>
+                            <option value='AR' label='Argentina'>Argentina</option>
+                            <option value='AW' label='Aruba'>Aruba</option>
+                            <option value='BS' label='Bahamas'>Bahamas</option>
+                            <option value='BB' label='Barbados'>Barbados</option>
+                            <option value='BZ' label='Belize'>Belize</option>
+                            <option value='BM' label='Bermuda'>Bermuda</option>
+                            <option value='BO' label='Bolivia'>Bolivia</option>
+                            <option value='BR' label='Brazil'>Brazil</option>
+                            <option value='VG' label='British Virgin Islands'>British Virgin Islands</option>
+                            <option value='CA' label='Canada'>Canada</option>
+                            <option value='KY' label='Cayman Islands'>Cayman Islands</option>
+                            <option value='CL' label='Chile'>Chile</option>
+                            <option value='CO' label='Colombia'>Colombia</option>
+                            <option value='CR' label='Costa Rica'>Costa Rica</option>
+                            <option value='CU' label='Cuba'>Cuba</option>
+                            <option value='DM' label='Dominica'>Dominica</option>
+                            <option value='DO' label='Dominican Republic'>Dominican Republic</option>
+                            <option value='EC' label='Ecuador'>Ecuador</option>
+                            <option value='SV' label='El Salvador'>El Salvador</option>
+                            <option value='FK' label='Falkland Islands'>Falkland Islands</option>
+                            <option value='GF' label='French Guiana'>French Guiana</option>
+                            <option value='GL' label='Greenland'>Greenland</option>
+                            <option value='GD' label='Grenada'>Grenada</option>
+                            <option value='GP' label='Guadeloupe'>Guadeloupe</option>
+                            <option value='GT' label='Guatemala'>Guatemala</option>
+                            <option value='GY' label='Guyana'>Guyana</option>
+                            <option value='HT' label='Haiti'>Haiti</option>
+                            <option value='HN' label='Honduras'>Honduras</option>
+                            <option value='JM' label='Jamaica'>Jamaica</option>
+                            <option value='MQ' label='Martinique'>Martinique</option>
+                            <option value='MX' label='Mexico'>Mexico</option>
+                            <option value='MS' label='Montserrat'>Montserrat</option>
+                            <option value='AN' label='Netherlands Antilles'>Netherlands Antilles</option>
+                            <option value='NI' label='Nicaragua'>Nicaragua</option>
+                            <option value='PA' label='Panama'>Panama</option>
+                            <option value='PY' label='Paraguay'>Paraguay</option>
+                            <option value='PE' label='Peru'>Peru</option>
+                            <option value='PR' label='Puerto Rico'>Puerto Rico</option>
+                            <option value='BL' label='Saint Barthélemy'>Saint Barthélemy</option>
+                            <option value='KN' label='Saint Kitts and Nevis'>Saint Kitts and Nevis</option>
+                            <option value='LC' label='Saint Lucia'>Saint Lucia</option>
+                            <option value='MF' label='Saint Martin'>Saint Martin</option>
+                            <option value='PM' label='Saint Pierre and Miquelon'>Saint Pierre and Miquelon</option>
+                            <option value='VC' label='Saint Vincent and the Grenadines'>Saint Vincent and the Grenadines</option>
+                            <option value='SR' label='Suriname'>Suriname</option>
+                            <option value='TT' label='Trinidad and Tobago'>Trinidad and Tobago</option>
+                            <option value='TC' label='Turks and Caicos Islands'>Turks and Caicos Islands</option>
+                            <option value='VI' label='U.S. Virgin Islands'>U.S. Virgin Islands</option>
+                            <option value='US' label='United States'>United States</option>
+                            <option value='UY' label='Uruguay'>Uruguay</option>
+                            <option value='VE' label='Venezuela'>Venezuela</option>
+                        </optgroup>
+                        <optgroup id='country-optgroup-Asia' label='Asia'>
+                            <option value='AF' label='Afghanistan'>Afghanistan</option>
+                            <option value='AM' label='Armenia'>Armenia</option>
+                            <option value='AZ' label='Azerbaijan'>Azerbaijan</option>
+                            <option value='BH' label='Bahrain'>Bahrain</option>
+                            <option value='BD' label='Bangladesh'>Bangladesh</option>
+                            <option value='BT' label='Bhutan'>Bhutan</option>
+                            <option value='BN' label='Brunei'>Brunei</option>
+                            <option value='KH' label='Cambodia'>Cambodia</option>
+                            <option value='CN' label='China'>China</option>
+                            <option value='CY' label='Cyprus'>Cyprus</option>
+                            <option value='GE' label='Georgia'>Georgia</option>
+                            <option value='HK' label='Hong Kong SAR China'>Hong Kong SAR China</option>
+                            <option value='IN' label='India'>India</option>
+                            <option value='ID' label='Indonesia'>Indonesia</option>
+                            <option value='IR' label='Iran'>Iran</option>
+                            <option value='IQ' label='Iraq'>Iraq</option>
+                            <option value='IL' label='Israel'>Israel</option>
+                            <option value='JP' label='Japan'>Japan</option>
+                            <option value='JO' label='Jordan'>Jordan</option>
+                            <option value='KZ' label='Kazakhstan'>Kazakhstan</option>
+                            <option value='KW' label='Kuwait'>Kuwait</option>
+                            <option value='KG' label='Kyrgyzstan'>Kyrgyzstan</option>
+                            <option value='LA' label='Laos'>Laos</option>
+                            <option value='LB' label='Lebanon'>Lebanon</option>
+                            <option value='MO' label='Macau SAR China'>Macau SAR China</option>
+                            <option value='MY' label='Malaysia'>Malaysia</option>
+                            <option value='MV' label='Maldives'>Maldives</option>
+                            <option value='MN' label='Mongolia'>Mongolia</option>
+                            <option value='MM' label='Myanmar [Burma]'>Myanmar [Burma]</option>
+                            <option value='NP' label='Nepal'>Nepal</option>
+                            <option value='NT' label='Neutral Zone'>Neutral Zone</option>
+                            <option value='KP' label='North Korea'>North Korea</option>
+                            <option value='OM' label='Oman'>Oman</option>
+                            <option value='PK' label='Pakistan'>Pakistan</option>
+                            <option value='PS' label='Palestinian Territories'>Palestinian Territories</option>
+                            <option value='YD' label='People's Democratic Republic of Yemen'>People's Democratic Republic of Yemen</option>
+                            <option value='PH' label='Philippines'>Philippines</option>
+                            <option value='QA' label='Qatar'>Qatar</option>
+                            <option value='SA' label='Saudi Arabia'>Saudi Arabia</option>
+                            <option value='SG' label='Singapore'>Singapore</option>
+                            <option value='KR' label='South Korea'>South Korea</option>
+                            <option value='LK' label='Sri Lanka'>Sri Lanka</option>
+                            <option value='SY' label='Syria'>Syria</option>
+                            <option value='TW' label='Taiwan'>Taiwan</option>
+                            <option value='TJ' label='Tajikistan'>Tajikistan</option>
+                            <option value='TH' label='Thailand'>Thailand</option>
+                            <option value='TL' label='Timor-Leste'>Timor-Leste</option>
+                            <option value='TR' label='Turkey'>Turkey</option>
+                            <option value='TM' label='Turkmenistan'>Turkmenistan</option>
+                            <option value='AE' label='United Arab Emirates'>United Arab Emirates</option>
+                            <option value='UZ' label='Uzbekistan'>Uzbekistan</option>
+                            <option value='VN' label='Vietnam'>Vietnam</option>
+                            <option value='YE' label='Yemen'>Yemen</option>
+                        </optgroup>
+                        <optgroup id='country-optgroup-Europe' label='Europe'>
+                            <option value='AL' label='Albania'>Albania</option>
+                            <option value='AD' label='Andorra'>Andorra</option>
+                            <option value='AT' label='Austria'>Austria</option>
+                            <option value='BY' label='Belarus'>Belarus</option>
+                            <option value='BE' label='Belgium'>Belgium</option>
+                            <option value='BA' label='Bosnia and Herzegovina'>Bosnia and Herzegovina</option>
+                            <option value='BG' label='Bulgaria'>Bulgaria</option>
+                            <option value='HR' label='Croatia'>Croatia</option>
+                            <option value='CY' label='Cyprus'>Cyprus</option>
+                            <option value='CZ' label='Czech Republic'>Czech Republic</option>
+                            <option value='DK' label='Denmark'>Denmark</option>
+                            <option value='DD' label='East Germany'>East Germany</option>
+                            <option value='EE' label='Estonia'>Estonia</option>
+                            <option value='FO' label='Faroe Islands'>Faroe Islands</option>
+                            <option value='FI' label='Finland'>Finland</option>
+                            <option value='FR' label='France'>France</option>
+                            <option value='DE' label='Germany'>Germany</option>
+                            <option value='GI' label='Gibraltar'>Gibraltar</option>
+                            <option value='GR' label='Greece'>Greece</option>
+                            <option value='GG' label='Guernsey'>Guernsey</option>
+                            <option value='HU' label='Hungary'>Hungary</option>
+                            <option value='IS' label='Iceland'>Iceland</option>
+                            <option value='IE' label='Ireland'>Ireland</option>
+                            <option value='IM' label='Isle of Man'>Isle of Man</option>
+                            <option value='IT' label='Italy'>Italy</option>
+                            <option value='JE' label='Jersey'>Jersey</option>
+                            <option value='LV' label='Latvia'>Latvia</option>
+                            <option value='LI' label='Liechtenstein'>Liechtenstein</option>
+                            <option value='LT' label='Lithuania'>Lithuania</option>
+                            <option value='LU' label='Luxembourg'>Luxembourg</option>
+                            <option value='MK' label='Macedonia'>Macedonia</option>
+                            <option value='MT' label='Malta'>Malta</option>
+                            <option value='FX' label='Metropolitan France'>Metropolitan France</option>
+                            <option value='MD' label='Moldova'>Moldova</option>
+                            <option value='MC' label='Monaco'>Monaco</option>
+                            <option value='ME' label='Montenegro'>Montenegro</option>
+                            <option value='NL' label='Netherlands'>Netherlands</option>
+                            <option value='NO' label='Norway'>Norway</option>
+                            <option value='PL' label='Poland'>Poland</option>
+                            <option value='PT' label='Portugal'>Portugal</option>
+                            <option value='RO' label='Romania'>Romania</option>
+                            <option value='RU' label='Russia'>Russia</option>
+                            <option value='SM' label='San Marino'>San Marino</option>
+                            <option value='RS' label='Serbia'>Serbia</option>
+                            <option value='CS' label='Serbia and Montenegro'>Serbia and Montenegro</option>
+                            <option value='SK' label='Slovakia'>Slovakia</option>
+                            <option value='SI' label='Slovenia'>Slovenia</option>
+                            <option value='ES' label='Spain'>Spain</option>
+                            <option value='SJ' label='Svalbard and Jan Mayen'>Svalbard and Jan Mayen</option>
+                            <option value='SE' label='Sweden'>Sweden</option>
+                            <option value='CH' label='Switzerland'>Switzerland</option>
+                            <option value='UA' label='Ukraine'>Ukraine</option>
+                            <option value='SU' label='Union of Soviet Socialist Republics'>Union of Soviet Socialist Republics</option>
+                            <option value='GB' label='United Kingdom'>United Kingdom</option>
+                            <option value='VA' label='Vatican City'>Vatican City</option>
+                            <option value='AX' label='Åland Islands'>Åland Islands</option>
+                        </optgroup>
+                        
+                      </select>
+                    </div><br>
+                    <div class='form-check'>
+                      <input type='checkbox' class='form-check-input' id='Check1'>
+                      <label class='form-check-label' for='exampleCheck1'>Confirm details</label>
+                    </div><br>
+                    <button type='submit' id='popupbtn'>Register</button>
+                    </form><br>
+                    Already a user? <a> Login here</a>
+                </div>
+                <div id='rightpopup1'>
+                    <img src='images/signup-image.jpg'>
+                </div>
+            </div>
+       </div>
+         <!-- login modal popup -->   
+        <div id='id01' class='modal'>
+            
+            <div class='modal-content animate container-inverse ' id='popup'>
+               
+                <span onclick='document.getElementById('id01').style.display='none'' 
+                  class='close' title='Close Modal'>&times;</span>
+                
+                  <div id='leftpopup'>
+                    <img src='images/signin-image.jpg'>
+                  </div>
+                
+                <div id='rightpopup'>
+                    
+                      <h2><b>Login</b></h2>
+                    <form>
+                    <div class='form-group'>
+                      <label for='InputUsername'></label>
+                      <input type='text' class='form-control' id='InputUsername' placeholder='Enter username'>
+                    </div>
+                    <div class='form-group'>
+                      <label for='InputPassword'></label>
+                      <input type='password' class='form-control' id='InputPassword' placeholder='Password'>
+                    </div><br>
+                    <div class='form-check'>
+                      <input type='checkbox' class='form-check-input' id='Check1'>
+                      <label class='form-check-label' for='exampleCheck1'>Remember me </label>
+                    </div><br>
+                    <button type='submit' id='popupbtn'>Submit</button>
+                    </form><br>
+                      Don't have an account ? <a> signup now</a>
+                </div>
+                
+            </div>
+            </div>
+        
+          
+        
+         <div id='myCarousel' class='carousel slide' data-ride='carousel' style='margin-top: 0px;'>
+             
+            <!-- Indicators -->
+            <ol class='carousel-indicators'>
+              <li data-target='#myCarousel' data-slide-to='0' class='active'></li>
+              <li data-target='#myCarousel' data-slide-to='1'></li>
+              <li data-target='#myCarousel' data-slide-to='2'></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class='carousel-inner'>
+              <div class='item active'>
+                <img src='https://www.adammonk.com/blog/wp-content/uploads/2017/06/Bhutan-Photo-tour-47-728x305.jpg' style='width:100%; height:350px;' alt='Los Angeles'>
+              </div>
+
+              <div class='item'>
+                <img src='https://adbhutbharat.com/media/common_images/cms_1551706116Untitled_design_(10).jpg' style='width:100%; height:350px;' alt='Chicago'>
+              </div>
+
+              <div class='item'>
+                <img src='https://www.cosmosvacations.in/wp-content/uploads/2016/08/homepage-banner_20_02-1500x350.jpg' style='width:100%; height:350px;' alt='New York'>
+              </div>
+                
+              <div class='item'>
+                <img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSExMWFRUXFxUVFhUYGBgXFRcVFRUWFhcVFRYYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLi0BCgoKDg0OGhAQGzUlHSUvLS0vLS0tLSstLS0tLS0tLS0tLS0tLS0tLS8tLS0tLy0tLS0tLS0tLS0tLTUtLS0tLf/AABEIAGwB0QMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAQIDBQYAB//EAEUQAAEDAQQGBwUGBAUDBQAAAAEAAhEDBBIhMQUGE0FRYRQiMnGBkaFCUrHB0RUjYpLh8ENTovEHFnKC0iSy4jNEc5PT/8QAGgEAAwEBAQEAAAAAAAAAAAAAAAECAwQFBv/EADERAAIBAgQEBAUEAwEAAAAAAAABAgMRBBIhURMUMUFSYZGhBXGBsfAiMtHhFULxI//aAAwDAQACEQMRAD8Axl5dKU0kl1e8jyLDgU4VExoTpVILDxUSlsqIp4MJoVhpELpKmvyExzAqQ0Mkrkq6Uy0IQkhPSFJjQ1InJCEihhTU8hNhAxIXLoXXU0AhTSkZiXDgR6gKS4U07oCNdClFErjSKdhXI7qcKY4p4pFdsSrSJbGikOKR1DgnOpELmtKYiWlYiRPruUtnsrAeuYHHNRNnIEwk2RQQ77hVezUR2XzjjgcOaa17GkYy3mEPsTOCJGjKjsYCCbbsDrwTIEJGDEIo2ICQ5ww4GUXZzTayeqXbhn5qB5kVtpsjpmDHoh+jFaKlbYbBYDwIy8QhS6HdZgIORx9EgU2UmzSCmr7YU3YHqkb1FVpsaMCCZwwUuJaqFRs1xplW1C6YmCco+aldRpk5keGHollDiFHsykuK5Fi5yOS60WIzDWkjjCTiVxEU1xcGq5+yKkTcTDot/ulTYedFX4JIVzS0Q47j5KduhDwPkgWdFCxiKp0Srlmg3jJiIp6OLe3A8kyHMrbJo+ocvkrSzaFLu05SsexmWHiFM/SzAOfJIhtjm6us4oqy6EptOcqjfpR275qM2l7uXcgVpM2VKzMbkAnVK7G5uHxWTszHntOMK9sFnpj2pPNS2hZH3CXaQZzPgUO/SnBjj6KybSbyTHUQlmHlRWm21c9l/V+iHrVa5yYR4z8lbV6jmjACeaFNWv8Ah8AjMOy2Kp1jrHGD81JSsDxiQ48olWlOy2h2bwPD6ItlifvqOPkk5lWKXZH+U5ctB0Q+8fVclnCx5b4pbibHJPYAruVY5tPknhsblxZwKcAVVxMRzOSbswprxSgA7k7gQEpIRAaE+nSaSJMDencaQHcS3EbVY0YDHmoI5IuMHurkTs+SjdCCiEpsKQrgFVhkRCSEU1k7kfQsdMwXFvnBTsK5VMZKJo2YncrinRs43jzUrdiMQ+O4ouK5UaOsG1vOaMiBlEwM+asGaHjMIylXYHE3hDgI8JCMFYcVlTclH1+4S1ehQ2mwhpxQjrMNxWnqGd0qqqVGjB4Z81vGVzN3QHS0STvCn+wyoekluLWkjccY9VKzWAjC6PGVTv2FqIdAnjASs0HulOdrKR7A81EdZXe6FP6w1JHaBM4FE0NBEYkqOlrSN9P+r9Fx1oxPUw3Cfmk84rMLqaLYBi2T/qQDtH1SIAAHIfE70w6yPmbojgn09ZnD2G+qVpIVmA1tDVR7JPNQMsDzuV2NY3nKmPVGWXSwdg+mG+CG5bDuZ6nYXDhzVhS0U4xiCO9X/SaG9zPRS07TR3PZ5hZub2EU32Sd4n4JLRoKQLsDvWgNVnvN8wkvA9kg9xU52FjNjVo+8EXR1faM8VJpVlQCRI7nQqQWytOD3+ZPxVptrqGrNHS0dTZjCKY1u5ZltrtJwv8AoAfgm16tUdup4YfAJW8xZTU1KjG9pwHihKmlqA9qe4FUVlLJlxDuRBVtRoUKm67y/VS7IFEjq6w0x2WOPfA+qhOsBOVMDxlXNLQdIbkXR0VTGN0Kc8S8iMwa1eqJF6ORgIX7OqExdMre0bK1uTQFOKXJS6hSsjCUdX6h3R3oj/LD+IW02aXZKeIx38jL2bVho7RlW1n0RSZk0K0FJOFNTmFdgIsTPdHkpRRHBFbNdcSzC1BtlyUTrKScXYcAIHij7i66jMFgLogUraQU91cAjMOzIriW4pYXQlmDKR3EilurkZh5Tx+4UobyWlFsk4tgcIRNnpsON2e/5FZcw11R3LDJ9GZK6nALZChSJIutDuYn45qIWINPW2Z5QGn0TWLWw3g3uZOEkLa020smsZPko6lka4k7MD0HoE1jF3Qck+zMaV0rSP0dJwb+/JK7RAuyR4XZW3NQI5WZmSU2+tHTstOINJxO/qfAygLRop143Kbru6RirjXi2S8PJLQq9qeKY56OqaNqD+G7yKjOjav8t3ktFOO5HDkuwEXppei36Nqj+G5MOjqv8t3kqzrcMj2Btok2iJOjK38tylp6FrETd8CYKOItxZHsBbRP26kfYntMGAeBIR2itDtqPZt3NbQJio4uaABwzzOAA4lE6qjFyEoXZDa6j2NohzA0OYXsdeBvtc4mYGUSBBQb7QTvXqFk1FsVWwse5hfWFARTNVrrlWLxYHMgZ4YYYZSsBadB1GkgxIJBEjcuXB4lzTUtH/LLnStaxWbc8SmOqI2top7RLi0ci4Se4BB7M8F3qV+hnlsMNU8SmkolllJi6JJ3CZThZYMPBbxkfJO4rAiXwVr9nsuzIGOfWPdgJTaGjwSJdTjm6MOeRTzCsVuCWFb1rFSJhhYD/wDIfiRHqp6GjbOCBUfyPWGfhu5pZ0FihISgrUN0bZTvYAN99xPlAUVSx2PJtXxLZjuwUcVbP0CxQMtLhkSl6W7jn3K8dZrLkKg7y3H/ALYUlIUmdmqwT+Ef/mUOp5E2Rn6Yc7ISj7Pomq7NjwOIH1VtTtIbgLU1u8QwAY59liMp2hhzth8CfoolUa/GGUphoKt7LXeIu/NEUdAWkHCBzlWQc0ZW3DD2nH5oW06ROQtZ74cPhmo4kn0+zDLYmbq9VPacCOEuRlDVmmM708nFZ2ppKturvP8Auj54pjdO2hv8V3iQfihxnuCSNi3QNL3Z7ySp26JpzNweSxX+YLR/NPk36JBpq0/zj5hZuE9x2N42wUx7DfIKZlnaMgPJYOlpaqe1aSOOfxAUlbS9QHCu5w5Ej0MKeHLcZvQxPAWSsWsrBF81CeWXiJVvZtYqDvaI7wB81lJSXYpRTLkBODUNRtzHdlwPcUQ2pyWbqF8EfdShqQOXbVo9oDxU8QfBY66uASwllLiofBYkLoXSkLuRKXFHwGckJQ1qrPjq0yTzIAVRWoWt2TmsHAH+6pTT7idJ7F8XJhesvV0Va99Qn/eU0WK1tOBJ/wBx/wCSpuPiDhvY07rQ0ZuA7yAoKuk6bcLw8MfgqKlo2uTJaz19cVaWewXc6dOeIH6KXOK7lKk9ib7XZ+L8pXKTZ/gZ+/Bcp4iHwWZKrbwR1Y7iFPZbQ05wD6KkbRPEKVtNw/RZOMbWudylK92i7cXQbsO8UBWZVObJPETKio1XDI/vxUwquMEuKUbxZclGa7kTadXK6VLTfUbucESysTkZ9E/pJjJPjPpZFrDJapsa3TJEgsE8sPNMbpgxBGPEfQpKsuEAgcf7od1iE5+pRHhd0Eo1uzCRpp3AHvEfAoqlphhHWwPmFWv0eIwMHxQ77HGbmearLRkK9eHUvLRbRGDmjfjj80DV0o0Z/AqtwZ7jj4mPJDV7UCewz4rSnSijKpVk+paVLVWIljWkHLMH1KrW1rTwcfIqMaSu5NwyzPpwUFW3zkHjkHmF0Quuy/Pqc82n3LKpaq4bNz4z34FRfa9UwA1oPP8AUhVwt7oi+/zJSPtRf2nnDL9haJbpGbezFtVZ7ndcyRh84Wi0bqZZrXY+k169Sls33XQ5jaeJAkl7TBg5zvVNZ6O1c1hrASQCXEhoHEyFtWau162j61hpbJ+0exxO2acOo/MAkdkRhkc153xKu+GqcdG9jWhTWbM+hA//AAssgcyi2212mo0uFMvpycZDgwNE9nEx7KzWsOgRY3Cma7qs3jeLYMAxiZh2Wa9POhK5tdntb2n7miKZF5kEkODiRhPawxGWSyWvGhKhpNrFpDKe0h4LC1wqVL7cnz7Tsgcl5+BrVadeOa9n108v5NasIuDt1MPVe3cSd2KayuQCNxzGMFQlIF9RmODKF07aG9lkeJnwO4KenpYBpaabSDG9wPnKr4CVtEnIE9wJTzLuCiwh1uzDRDTumfXBDOdKlFjqe4/8pTm2Kp7jvylVxIruHClsQBKJRPQ372u8inixu913kUcVbhwXsCyU8VPwhFCyP90+RUrLM/dT/pKl1o7hwHsBOqcQRyC6+MOSsegVT/Dd+Upfset/Kd+UrN4mHdlcrPYFL6RGLHZDFpAx3k5oZ7W7gfE4q2p6CrH+GR34IqnqvVOd0eJ+izeLpR/29y1hKj7GeZTG+VM2ytOTh4z9Fo2apv3vZ6/RTt1U41B+X9VlLH0vEWsFU2MyNHmO0z8wTTYXcj3EH4LaWXQAbuY7m5p+qPoaNu8B/pELGXxCK6GiwMu5gW6Lqe6fI/REUNEv30nHzHyW/ZQhTtasX8RNFgTDM0KT/wC3f+aB/wBqIbq2c7ngX/8AitnB5JTT5rJ49lLBGLdoN4/hM/MTHen09D1TlcHMNPzC2Ioc/guFm/G7+n6KP8g9y1gfIy7dA18hUw5Ej0RdPVcntVTK09NoG+fJPELJ/EZblrAR2M3T1VG+oT4I+jq9SGbQf3yVuCE8OCh4+T7lcnFdgSz2BjOyIRApqUEJ14LJ4tD5exDs11xS3gukI5pBy5EWJpYp5CQwq5lE8uwZzEwtRLgFGQnzKDlmQQmlTEJpT5lC5Zka5OSo5hByzPLGUypRTKntGjXMYXmowgMD8Jgg1LmBIHeq6w2gVXFlJwe4ZtaQTh/YrpjXjNOUXoJ01F5Wg3Zk7wlFMjeorW002X39Vt29eJAaWnLuVJV1moEw2sG5y4tqECNwhpJPgiNa8brVeSv9jR04xdnp82aQXuPmmuDuPgq+wWunUDbtqoEu41A12U4tc0R+iEq6w2anUDS++yDLmYgYGMc84ynBTTxCnfL1Sva359B1IRh1fuXbS8ZfFIWP/ZWZq610xN284jLAAHxOPog6Wt1STea0jdBII8Tn6LrtIw4lLo7mzAfl9Emzcd3wWQOttWCRSbESCXGImM4xxSUdaazmghtKZM4uOAgzdkbjx3HBTdrYHKm9Fc2Rs5O4+ACoqlQSYny/VczWSu1ofsWOBJAIe4TgIAF0mcfFUNmrvwu0XRGAaS445YHHHFFOvrq9DOtFWVlqXxg5lw8Ck2I3H0KrH2h7A41KNVgGUtcAeOJEf3UFHTLPaa4dxlaqvF9JGDW6Lk045+aacogDxVRZtNi9DmgN4ySR9VYu0pRHtj1PwQq4ZEFMbPs+R/Vb3VjQ1pfZmGnWZTYXXh9y51QFr5ILhUAum6RlkYkHFed0tK0jk9vw+K9m1E0dRfY6T3slzr2N4jAPIGAcFxY2WeCXmawSjqhz6GkHNxr2ebz2iaFVw6hLc9vh2Tnx4rJa02S0OpWdleqwhu0u3GuaMbhMgndIA35r0Z2jLMBiyOMVHf8ANeY66WypAYyg5rKRcGuc9rgcg441CcS0QIEAc1yUnkmpJ+has3aXQofsk++PEIujo5gHWaDzxWVdp6peg3QOYd8nKZusZkCWgSJPWwG85r0HiZPuXGNJa2NT9m0T7J8yufopo7GB5kqvsGk9oxrhhO7geCLNsc0kGWkYEHMEZg8wrz1NzWMaMuwVSpV24BzSOY/srGm6qPap+Th81TM0jjF4TwkT3kblO3SHNZzlJnXSp013fqXtOq7fd8J+amFVULbeeKkFu5rllGR2wpwLzap23VSaz7ofBunJ24zwO9R9M5rCzZvGlB9C8FoSttPJUgtfNKLXzWbgzVUEXgtCd0hUXS+acLVzWThIrl0X3SAk6QFSdKPFIbUeKWSQuWRfC0BdtwqDpZ4rhazxRkmLlUaAVk4Vgs90s8U8WwqXCYuWRf7YLukBUPTDxXdLPFS4zDlS/wCkhd0kLPOtpAmR++e5cy2E71GWW4csr2NILQE4WgLPC1Hil6WVDhITwhoukBKLUs4y3g5OB7jKr9Ja10LO8U6tS64iYhxgExLiBgM/IqVTqN2SMp0IwWaTSRtelpOlrLVNOU2sNQ1G3G5uBBAnIYb+Sr3a7WQAE1xjgAASR/qaBLR3hCo1X0TIlTpR/dJL6o3XSUvSVhq2utlaJ2wOMQ2Se+BjCWprrZGgE1x1soDnR/qDQS08iqVCt4WRaj416o3HSUu3Xmelde2B9HYvDm3/AL2WuHUMDeBxJw91W510skgbdpkTIkgZdojs57+BWnL1kk7dTNSottZlp5o2ZrphtHNef6W18s4pPFN7i9zHhhax0B0EAy4ARMYiVVaF17ZToMp1BVe9jYJ6pveJdJ3c1osLXcb2J4tBTyuS6dT1PpA4pDXC8yr/AOI4GVBx73tHwBVSf8QrZHZo99x/p11ccHXfl9SZYvDR73+SPY9uEi8d/wA/2v8AB+X9Vyvkq+6I57D+foY+06VtFRhDqzi26Glt8AOaHEgOaD1sRw3DkhbFa3UntqMwc0gg5iRyyPctG+2kuY7Z0ZZdDSGwYbF2SMTEBR2e0OY/aMFJr8cbs55kAnmvWVKrltw/dHkupSvfiezKi36YtFYAVKr3MBlrC4lowjAE7ggFoKDbpJu0TIIxaciCDEERmVNTqQxzAyhDiCfuyTImCCThF4q40qkdIw90S6lKWsp+zM7UolphxAwDuOYkDDeRHmmELQNYNlsfuy29fkh169EZh3BS0AG09ndpObJcJa8wSACe1nACvJW8PuiFOj4vZmZhcBKvxYhF0lsTMQ7Duk4JrNFtEw4CRB7WImYOOOQ8lfCqbEurT3KMJ9G9jdB5kTIGW7JaGhZLocGuADsxDvSDglFkAJLS1swCGh4BiDiL2OIB71LpVdvcpVKWn6vYAp6ar7JtAEFocXDqy+8QBn3ALhpavfbV2tS+wNax4cbzWtm60EZASfNEmyBpkETxxHzQ9UXSAAIzOaylhsqbyr/o3Wcn+5hNr09a6jbtW01XtcILHPeRAgiQcIyKDbTMABpM44AyN0fNFWjSb6hl5vGA0TdwaMA0Q3IfJDmu7E+KzhTjFdLfIUm2/wCQmnQLxdbQe5+B6t6QBIIDYMzIM9wUYsLwYdTqNMGQ5haBhIxdH74ptK1PYbzTB4iZSG0OccRe75VZVcnUs9EauPr1KdMPpg1L10udA6rS4nCXHAHJq3OjLbbLPZ9jTr2ZtKm1mP38hr3EsM3J6xJGA8lhdD2+0UH06lOiXupl7mh1N72/eMLHYNgxB3FbvQesVn2JFq0ZaTVMtIo0q2xcxuNObz5ETziJGa48RGbenQ6aTglr1Jzoq11AX17bZ2MguLnPqBzQHPbDGuDGzeY4Z8FV2rVKhXNyz6Qa+oTdDXulj3GcWub2QeV7EhVmvGlNvWpus1gqU2U2gTWovL3OD6jiSZJLfvN5mVnrHXtFMhzWva4EEdQggyMcRyUwoTaTTs/p7idRX1RrK/8AhjXpGKlazjAGS6qQJN0T93vOCCtOpdeiy0Xn0IaHNqGahc00rtVwZNOQ6AO8GFqdE/4iMrQ23WSrVIAAfRGLutPXZLQIIacJ8N5+k9cdGObUa+w2wbRrtoCGgkvAa+fvZDiABKxXNLSRr/45TyayaTLHXxg2828wAgOugSJgxI5o1mkrRa6zi1xL6jnPIAaMXEuOcADvwQ2kK9lvE2ez1WNPsvcXd0gkyU6hpY06ja1Km4VIO1LrxDnuMuc0gggHDfxXqRzuGi18zkbUZ9dPJh9up12OpBphzqcne6C4nryIkSBgq+vVtFF7hfcSc562e8A5Ke36wValo24pnDshzcpxMicesSc11XTFZ7i94a8mO012ABkNEOBgEnPHE4rWMKrastLfLUpVIqP6m7kzdJWprWudTkOBLTdMGDEmDx7lY6KtVSo4tqvNIipTHUp3xdcXB8m8LsdXEEnPAwgP8w2iGgNYLogEMdJ8S4xv7MJn2zapa5huFswWF4zjAy8zlv8AGVpUw1Rwaj1/PmKOKtKzbsaHS+uFF9NrLNZ6jazrjHkkOaboiGNGLnEgGYGZzJVDT1krZ1WNIkAluF3d1wJjdgYOaR+la5vTSpG8Gg9QmbnZJl2J5nFRWjSFZ8g0qMHNopNaPMYjwKzhhKkdMvuWsZa2WT/oLdrU0HBriN5wHiAprNrQwkBwcwY9Y4jl2QSgLJpKpSB/6ag4kQS5jzImchUAGQyAyRD9P1SGDolmhpJDSyoWm8QSHA1MRIGCTw1V6Zfrf+joh8QaV87vtb+yY61NHsu3FG2LWVpY6o+lVujAOZccJJgDrFp8uCzVrtVao5zjTptDieqymGtDT7A33BkASURS0g9rWt6NRlrSy/dqhxaXFxm7UAk3iJABhTPCTlG1gXxSrf8Ad9i1drhTJJuPGOQuwPXJNdrRM3abiBvkeapdscP+npCMv/XgHDETVMHD9wE1z3F17ZMBwwAdEgzMEnH6qlhn4Rf5Os1+/wBi7Gs+675uH0T6Ws7DObThAcDBxxxbOQERG/wVbV0hULGsZRp07oguawlzhIOJeTwGUKAWmtAwGAgTTBEQBlEeyMc80nhpP/Wwn8SreNmgfrHTE9eTEgBrxOA95oUVp1rbIDGu7IvE+9jJGJ5eXiqmzWyswENAEjNrGtOGUkCTmnutlQsLNk0S0smDMEQTnmVHLTXb89AfxGrLrNluNYXXQWsv4Y43YxjDAz3qqtes1eSW3WiYG84EnInODExuV1q5rF0am6m6zU33m3bxDr2UbyeZw3lUotMOcTZ6TwTJDgfSCDvWKp1c8lw9F01Wpo8ZKUFeq0/zYDo6ftDHMc999pnqlwAc3Fpm52TnBIwwMEJlo01aX4Ui5jQBDGXnQAIHWiTMHyRtpr37t2zUWQScGF0yZxl0lTNtlQNcG0g1zzJeNq0douutY1wa0YkYcVcaFRvNkt9V/wAMZ4pqNlUb9fv1KRuslqu3dsTwMCe69GPjKZY6dprvZTZtHOcQGAOIJOIEEnPE+ZU1u0WamIFwcA1x3AZk958e5B/Ybvf/AKXLdUJeEwliXLrJv1I61lDd7QZc25JvNumDfwETjHcckO8xGHmc+E8Eb9gu9/8Apck+wX+9/SU1RmQ6sQezlzjdbJLvYEmYBjqjOBMcFJS6rxecWlpxGLXDiB1eqe9SjV9/vf0uTjoGqfaP5XIdKewcSIM6mLsuJvlxgQYIwxGGOJO9ROa4DFrhwJBCvG6NN26WiO4jHwZKHZoV4M3mZzBD8uByRwqi7AqkGBvtN4N6nWEh7iZvjICPZgYfRJVqlxJOZ3zw/forptENv/dU+s4OHb6gE9RvFuO/HAIKrYiSTLROO+FMac+8fcqUo9mAzAu44DKSRedBJjIYADDgM1znTjhwwEcMVbMsVKMaZJ4isR6GmVK2yUP5R7+kfH7tVw5LsRxEVDiLo6xkHLMRyO7HzndGL6Db0AvgSBiTAmcd+AxnvVvpGjTeymKdOnTLWkOdfJvmZlwjhhgk0bZKbG1BUY2o5zYpna3Qx09owOthOChRm43y29C24p9bgHRGfzWf1f8AFKpvsg8R/wDY3/iuT4cyeJH8uQbMcEuzHBPlcCu+5x2EFMcEop8k4OS3lSYWEDE4N5lOa5KXJ3FYbs+ZS7NOBSgouOw0U1xpp0pSUXCxA5ijLFK8qMplobcXXEspJQMUMT2sUYcuD0gNVq88g4H1XoWjHVCBj815PomqQcFutEWp2GPBeTi4fqujtotWNg9j4WT1lZUg5xvhWtS1uAWW1gtzjIww5LGjFuSHNqxj7UHXjifVQVGlNr1TJURqFe1FI42xwYnhnNQhyW8tbkNE9zmlDOZQ15dfKq4rBIaOKeAOKFvri8p3FYMuDimlo4+qEvFIXnilmCwURz9VwdzQt8rrxSch2C73NJePvFChxS3ioch2C734j5JRU/EUICnDvSuOwZt90pW1eZQU80oSuFg9tbmfRSC1cz6KqLU67zKhsdi16UOPr+ic20Dj8FURzKWErhYvaFpPH4Ixlo5nzH0Waa8jJSC1ORcVjSsrDif34J20HEeM/RZtlpKf0h3FO4WNM2o3iPJ30S7Vn7Dvosyy1O4/FT07W/iUgNGAw8PX6Jdk05QqSnaHcURSqHNIQebJzSOs44fFCtqGc08OPFVdiI6tP8J8yoXN5O/finOqu4lRurlFxo40+Tv3/uStpg73DzUJtB5JW2h37lK4yU0hx9SkDBx9f0Tm1Dx9SnsdP7KVwsJDf2QuU1wLkXEf/9k=' style='width:100%; height:350px;' alt='New York'>
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class='left carousel-control' href='#myCarousel' data-slide='prev'>
+              <span class='glyphicon glyphicon-chevron-left'></span>
+              <span class='sr-only'>Previous</span>
+            </a>
+            <a class='right carousel-control' href='#myCarousel' data-slide='next'>
+              <span class='glyphicon glyphicon-chevron-right'></span>
+              <span class='sr-only'>Next</span>
+            </a>
+         </div>
+		 
+		 <!-----------------------------------------------------------------------------------------------
+		 -------------------------------------------------------------------------------------------------
+											SEARCH BOX
+		 -------------------------------------------------------------------------------------------------
+		 ------------------------------------------------------------------------------------------------->
+		<div class='se-box'>
+		   <div class='search'>
+		   <h1> Discover your next holiday destination</h1>
+			  <input type='text' class='searchTerm' placeholder='Search your destination'>
+			  <button type='submit' class='searchButton'>
+				<i class='fa fa-search'></i>
+			 </button>
+		   </div>
+		</div>
+        
+         
+         
+         
+         <div class='container'>
+                <div>
+                    <h1 style='font-size: 35px;'><b>Why Choose Us?</b></h2>
+                  <h3> Variety Of Tour Packages, Best Deals 
+                      And Personalised Services</h3><br>
+                
+             <div class='row text-center'>
+                 <div class='col-md-4 ' style='height: 400px;'>
+                     <img src='images/img1.PNG' class='image-thumbnail' ><br>
+                     <h2>Experience</h2>
+                     <p>Our dedicated travel team diligently works round-the-clock to design
+                         the best travel experiences for the customers.</p>
+                 </div>
+                 <div class='col-md-4 ' style='height: 400px;'>
+                     <img src='images/img2.PNG'><br>
+                     <h2>Positive Customer Feedback</h2>
+                     <p>We're truly humbled to have received volumes of positive customer feedback 
+                         for our services. This appreciation from our prestigious clients is more 
+                         valuable than any award for us. </p>
+                         
+                 </div>
+                 <div class='col-md-4 ' style='height: 400px;'>
+                     <img src='images/img4.PNG'><br>
+                     <h2>Recognition</h2>
+                     <p>We are proud to be accredited by major tour and travel associations in 
+                         India and world like IATA, IATO, TAAI, IMF, MOT 
+                         (Ministry of Tourism, Govt of India), and TOFT. </p>
+                 </div>
+             </div>
+               
+              </div></div><hr>
+             
+          <section class='section-news section-t8'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-12'>
+          <div class='title-wrap d-flex justify-content-between'>
+            <div class='title-box'>
+                <h2 class='title-a'><b>Latest Tours</b></h2>
+            </div>
+            <div class='title-link'>
+              <a href='blog-grid.html'>All Tours
+                <ion-icon name='chevron-forward-outline' ></ion-icon>
+              </a>
+            </div>
+              
+          </div>
+        </div>
+      </div><br>
+        <div class='row'>
+            <div class='col-md-4'>
+                <div class='con'>
+  <img src='images/t2.jpg' alt='Kochi img' class='image'>
+  <div class='overlay'>Kochi,Kerela,India</div>
+</div>
+            </div>
+            <div class='col-md-4'>
+                <div class='con'>
+  <img src='images/t4.jpg' alt='Hawaii img' class='image'>
+  <div class='overlay'>Hawaii, USA</div>
+</div>
+            </div>
+            <div class='col-md-4'>
+                <div class='con'>
+  <img src='images/t5.jpg' alt='Goa img' class='image'>
+  <div class='overlay'>Goa,India</div>
+</div>
+            </div>
+        </div>
+     
+    </div></section>
+         
+       </div>
+	   
+	   
+	<!-- ------------------------------------------------------------------------------------------------------
+			------------------------------------------------------------------------------------------------------
+											FOOTER
+			------------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------->
+
+<section style='background-color:black;color:white;'>
+    <div class='container'>
+
+      <div class='row'>
+
+        <div class='col-sm-12 col-md-4'>
+
+          <div class='widget-a'>
+
+            <div class='w-header-a'>
+
+              <h3 class='w-title-a text-brand'>TOURS</h3>
+
+            </div>
+
+            <div class='w-body-a'>
+
+              <p class='w-text-a color-text-a'>
+
+                Experience the most amazing places on Earth just some buttons away from you!
+
+              </p>
+
+            </div>
+
+            <div class='w-footer-a'>
+
+              <ul class='list-unstyled'>
+
+                <li class='color-a'>
+
+                  <span class='color-text-a'><span class='glyphicon glyphicon-earphone'></span> Phone: </span> +91 7378498144</li>
+
+                <li class='color-a'>
+
+                  <span class='color-text-a'><span class='glyphicon glyphicon-envelope' id='envelope'></span> Email: </span> tours@gmail.com</li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class='col-sm-12 col-md-4 section-md-t3'>
+
+          <div class='widget-a'>
+
+            <div class='w-header-a'>
+
+              <h3 class='w-title-a text-brand'>The Company</h3>
+
+            </div>
+
+            <div class='w-body-a'>
+
+              <div class='w-body-a'>
+
+                <ul class='list-unstyled'>
+
+
+                  <li class='item-list-a'>
+
+                    <a href='#'> <span class='glyphicon glyphicon-menu-right'></span> Legal</a>
+
+                  </li>
+
+                  <li class='item-list-a'>
+
+                    <a href='#'> <span class='glyphicon glyphicon-menu-right'></span> Agent Admin</a>
+
+                  </li>
+
+                  
+
+                  <li class='item-list-a'>
+
+                    <a href='#'><span class='glyphicon glyphicon-menu-right'></span> Affiliate</a>
+
+                  </li>
+
+                  <li class='item-list-a'>
+
+                    <a href='#'><span class='glyphicon glyphicon-menu-right'></span> Privacy Policy</a>
+
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class='col-sm-12 col-md-4 section-md-t3'>
+
+          <div class='widget-a'>
+
+            <div class='w-header-a'>
+
+              <h3 class='w-title-a text-brand'>International sites</h3>
+
+            </div>
+
+            <div class='w-body-a'>
+
+              <ul class='list-unstyled'>
+
+                <li class='item-list-a'>
+
+                  <a href='italy.html'><span class='glyphicon glyphicon-menu-right'></span> Italy</a>
+
+                </li>
+
+                <li class='item-list-a'>
+
+                   <a href='#'><span class='glyphicon glyphicon-menu-right'></span> China</a>
+
+                </li>
+
+                <li class='item-list-a'>
+
+                  <a href='#'><span class='glyphicon glyphicon-menu-right'></span> Hong Kong</a>
+
+                </li>
+
+                <li class='item-list-a'>
+
+                  <a href='#'><span class='glyphicon glyphicon-menu-right'></span> Argentina</a>
+
+                </li>
+
+                <li class='item-list-a'>
+
+                 <a href='#'><span class='glyphicon glyphicon-menu-right'></span> Singapore</a>
+
+                </li>
+
+                <li class='item-list-a'>
+
+                  <a href='#'><span class='glyphicon glyphicon-menu-right'></span> Africa</a>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+</section>
+  
+
+  
+	<footer style='background-color:black;color:white;'>
+    <div class='container'>
+
+      <div class='row'>
+
+        <div class='col-md-12'>
+
+          <nav class='nav-footer'>
+
+            <ul class='list-inline'>
+
+              <li class='list-inline-item'>
+
+                <a href='index.html'>Home</a>
+
+              </li>
+
+              <li class='list-inline-item'>
+
+                <a href='#'>About</a>
+
+              </li>
+
+              <li class='list-inline-item'>
+
+                <a href='#'>Property</a>
+
+              </li>
+
+
+              <li class='list-inline-item'>
+
+                <a href='#'>Contact</a>
+
+              </li>
+
+            </ul>
+
+          </nav>
+
+          <div class='socials-a'>
+
+            <ul class='list-inline'>
+
+              <li class='list-inline-item'>
+
+                <a href='#'>
+
+                  <i class='fa fa-facebook' aria-hidden='true'></i>
+
+                </a>
+
+              </li>
+
+              <li class='list-inline-item'>
+
+                <a href='#'>
+
+                  <i class='fa fa-twitter' aria-hidden='true'></i>
+
+                </a>
+
+              </li>
+
+              <li class='list-inline-item'>
+
+                <a href='#'>
+
+                  <i class='fa fa-instagram' aria-hidden='true'></i>
+
+                </a>
+
+              </li>
+
+              <li class='list-inline-item'>
+
+                <a href='#'>
+
+                  <i class='fa fa-pinterest-p' aria-hidden='true'></i>
+
+                </a>
+
+              </li>
+
+              <li class='list-inline-item'>
+
+                <a href='#'>
+
+                  <i class='fa fa-dribbble' aria-hidden='true'></i>
+
+                </a>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class='copyright-footer'>
+
+            <p class='copyright color-text-a'>
+
+              &copy; Copyright
+
+              <span class='color-a'>TOURS</span> All Rights Reserved.
+
+            </p>
+
+          </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+    </body>
+</html>

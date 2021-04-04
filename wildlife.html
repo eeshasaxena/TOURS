@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+	         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+			 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			 <link href="packages.css" rel="stylesheet">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<!-- ------------------------------------------------------------------------------------------------------
+			------------------------------------------------------------------------------------------------------
+											NAVBAR
+			------------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------->
+        <div id="header">   
+			<nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">TOURS</a>
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mymenu">
+                                        
+								<span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+								
+                            </button>
+                    </div>
+                    
+					<div class="collapse navbar-collapse"id="mymenu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+                                    <li><a href="explore.html">Explore</a></li>
+                                    <li><a href="#">Popular </a></li>
+                                    <li><a href="#">Customized</a></li>    
+                                </ul> 
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+							<li><a href="#"> <span class="glyphicon glyphicon-user"></span> Login</a></li>
+                                         
+                        </ul>
+                    </div>
+                </div>
+			</nav>
+		</div>
+		
+		
+		<!-- ------------------------------------------------------------------------------------------------------
+			------------------------------------------------------------------------------------------------------
+											HEADING AND CONTENT
+			------------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------->
+		<div class="main">
+			<div id="grad">
+				<h1 style="color:white;"> Exotic Wildlife</h1> 
+			</div>
+			
+			<div class="pack">
+				
+					<div class="container">
+						<div class="main_img">
+						<img src="packages.jpg" alt="african elephant">
+						</div>
+						
+						<div class="content">
+								<span>F</span>rom giant flat-screen televisions to 3D 12-channel surround sound IMAX,
+								the technology now exists to bring the wonders of 
+								the natural world to our living rooms and cinema screens in ever more realistic ways.
+								But however advanced the gizmos, 
+								nothing can match the visceral thrill of witnessing animals in the wild. 
+								Whether it is swimming with a whale shark on Australia’s Ningaloo Reef,
+								or coming face-to-face with a silverback gorilla in Uganda, 
+								nature has a way of reminding us how insignificant we are.
+								
+								<br><br>
+								Wildlife traditionally refers to undomesticated animal species, 
+								but has come to include all organisms that grow or live wild in an area without being 
+								introduced by humans. Wildlife can be found in all ecosystems. 
+								Deserts, forests, rainforests, plains, grasslands, and other areas, including the most developed urban areas, 
+								all have distinct forms of wildlife. While the term in popular culture usually refers to animals 
+								that are untouched by human factors, most scientists agree that much wildlife is affected by human activities.
+								
+								<br><br>
+								Humans have historically tended to separate civilization from wildlife in a number of ways, including the legal, social, 
+								and moral senses.<span id="dots">...</span><span id="more"> Some animals, however, have adapted to suburban environments. 
+								This includes such animals as domesticated cats, dogs, mice, and rats. Some religions declare certain animals to be sacred, 
+								and in modern times, concern for the natural environment has provoked activists to protest against the exploitation 
+								of wildlife for human benefit or entertainment.</span>
+								
+								<br><br>
+								
+								<button onclick="myFunction()" id="myBtn">Read more</button>
+						</div>
+								
+								<script>
+									  function myFunction() {
+									  var dots = document.getElementById("dots");
+									  var moreText = document.getElementById("more");
+									  var btnText = document.getElementById("myBtn");
+
+									  if (dots.style.display === "none") {
+										dots.style.display = "inline";
+										btnText.innerHTML = "Read more";
+										moreText.style.display = "none";
+									  } else {
+										dots.style.display = "none";
+										btnText.innerHTML = "Read less";
+										moreText.style.display = "inline";
+									  }
+									}
+								</script>
+					</div>
+			</div>
+		</div>
+		
+		
+		
+		<!-- ------------------------------------------------------------------------------------------------------
+			------------------------------------------------------------------------------------------------------
+											TOUR CARDS
+			------------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------->
+		]
+		<div class="card-main">
+			<div class="international" style="margin-left:20px;border-top:solid 4px;">
+				<h2> International </h2>
+					<div class="row">
+						<div class="col-md-3" >
+							<div class="con">
+								<img src="africa.jpg" alt="Africa" width="250" height="250" class="image" >
+								<div class="overlay"><b>Africa</b></div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="con" >
+							  <img src="hawaii.jpg" alt="Hawaii img" width="250" height="250" class="image">
+							  <div class="overlay">
+							  <b>Volcanoes national park, Hawaii, USA</b>
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="con">
+							  <img src="costa-rica.jpg" width="250" height="250" alt="costa-rica" class="image" ">
+							  <div class="overlay"><b>Corcovado National Park, Costa Rica</b></div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="con">
+							  <img src="https://imgc.allpostersimages.com/img/posters/david-pluth-overlooking-lake-ihema-akagera-national-park-rwanda_u-L-PIO38B0.jpg?src=gp&w=275&h=250" width="250" height="250" alt="costa-rica" class="image">
+							  <div class="overlay"><b>Akagera National Park,Tanzania</b></div>
+							</div>
+						</div>
+					</div>
+			</div>
+			<br><br><br>
+			<div class="national" style="margin-left:20px;border-top:solid 4px;">
+				<h3> Indigenous </h3>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="con">
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSvOq74R9a3VwqwIlMzsz684E86_nzx3Sq4kw&usqp=CAU" width="250" height="250" alt="karnataka img" class="image">
+								<div class="overlay"><b>Nagarahole National Park, Karnataka</b></div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="con">
+							  <img src="https://www.transindiatravels.com/wp-content/uploads/kaziranga-national-park2.jpg" width="250" height="250" alt="Hawaii img" class="image">
+							  <div class="overlay"><b>Kaziranga National Park, Assam</b></div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="con">
+							  <img src="https://cdn.shopify.com/s/files/1/0280/0261/products/snowleopard1_749fac93-b245-4543-a07f-3792f504f169.jpg?v=1417433679" width="250" height="250" alt="Goa img" class="image">
+							  <div class="overlay"><b>Hemis National Park, Jammu And Kashmir</b></div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="con">
+							  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmaq34-gX7GM9YnP9-06YCHet2na0PnZ17iw&usqp=CAU" width="250" height="250" alt="Goa img" class="image">
+							  <div class="overlay"><b>Kanha National Park, Madhya Pradesh</b></div>
+							</div>
+							 
+						</div>
+					</div>
+			</div>
+			<br><br><br>
+			<div class="marine" style="margin:20px;border-top:solid 4px;">
+				<h3> Marine Parks </h3>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="con">
+								<img src="https://i1.wp.com/www.kingtumblr.com/wp-content/uploads/2019/03/Great-Barrier-Reef-7.jpg?resize=250%2C250" width="250" height="250" alt="karnataka img" class="image">
+								<div class="overlay"><b>Great Barrier Reef Marine Park, Australia</b></div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="con">
+							  <img src="https://cf.bstatic.com/images/city/square250/888/888681.jpg" width="250" height="250" alt="Hawaii img" class="image">
+							  <div class="overlay"><b>St. Croix East End Marine Park, USA</b></div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="con">
+							  <img src="https://www.naturaltoursandsafaris.com/wp-content/uploads/2019/07/34983433_417726612036497_7379864480185843712_n.jpg" width="250" height="250" alt="Goa img" class="image">
+							  <div class="overlay">Kisite Mpunguti Marine Park, Kenya</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="con">
+							  <img src="https://www.holidify.com/images/compressed/1110.JPG" width="250" height="250" alt="Goa img" class="image">
+							  <div class="overlay">Gulf of Mannar Marine National Park, India</div>
+							</div>
+						</div>
+					</div>
+			</div>
+			
+		<!-- ------------------------------------------------------------------------------------------------------
+			------------------------------------------------------------------------------------------------------
+											FOOTER
+			------------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------->
+
+<section style="background-color:black;color:white;">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-sm-12 col-md-4">
+
+          <div class="widget-a">
+
+            <div class="w-header-a">
+
+              <h3 class="w-title-a text-brand">TOURS</h3>
+
+            </div>
+
+            <div class="w-body-a">
+
+              <p class="w-text-a color-text-a">
+
+                Experience the most amazing places on Earth just some buttons away from you!
+
+              </p>
+
+            </div>
+
+            <div class="w-footer-a">
+
+              <ul class="list-unstyled">
+
+                <li class="color-a">
+
+                  <span class="color-text-a"><span class="glyphicon glyphicon-earphone"></span> Phone: </span> +91 7378498144</li>
+
+                <li class="color-a">
+
+                  <span class="color-text-a"><span class="glyphicon glyphicon-envelope" id="envelope"></span> Email: </span> eeshasaxena2408@gmail.com</li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-sm-12 col-md-4 section-md-t3">
+
+          <div class="widget-a">
+
+            <div class="w-header-a">
+
+              <h3 class="w-title-a text-brand">The Company</h3>
+
+            </div>
+
+            <div class="w-body-a">
+
+              <div class="w-body-a">
+
+                <ul class="list-unstyled">
+
+
+                  <li class="item-list-a">
+
+                    <a href="#"> <span class="glyphicon glyphicon-menu-right"></span> Legal</a>
+
+                  </li>
+
+                  <li class="item-list-a">
+
+                    <a href="#"> <span class="glyphicon glyphicon-menu-right"></span> Agent Admin</a>
+
+                  </li>
+
+                  
+
+                  <li class="item-list-a">
+
+                    <a href="#"><span class="glyphicon glyphicon-menu-right"></span> Affiliate</a>
+
+                  </li>
+
+                  <li class="item-list-a">
+
+                    <a href="#"><span class="glyphicon glyphicon-menu-right"></span> Privacy Policy</a>
+
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-sm-12 col-md-4 section-md-t3">
+
+          <div class="widget-a">
+
+            <div class="w-header-a">
+
+              <h3 class="w-title-a text-brand">International sites</h3>
+
+            </div>
+
+            <div class="w-body-a">
+
+              <ul class="list-unstyled">
+
+                <li class="item-list-a">
+
+                  <a href="italy.html"><span class="glyphicon glyphicon-menu-right"></span> Italy</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                   <a href="#"><span class="glyphicon glyphicon-menu-right"></span> China</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <a href="#"><span class="glyphicon glyphicon-menu-right"></span> Hong Kong</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <a href="#"><span class="glyphicon glyphicon-menu-right"></span> Argentina</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                 <a href="#"><span class="glyphicon glyphicon-menu-right"></span> Singapore</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <a href="#"><span class="glyphicon glyphicon-menu-right"></span> Africa</a>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+</section>
+  
+
+  
+	<footer style="background-color:black;color:white;">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-12">
+
+          <nav class="nav-footer">
+
+            <ul class="list-inline">
+
+              <li class="list-inline-item">
+
+                <a href="index.html">Home</a>
+
+              </li>
+
+              <li class="list-inline-item">
+
+                <a href="#">About</a>
+
+              </li>
+
+              <li class="list-inline-item">
+
+                <a href="#">Property</a>
+
+              </li>
+
+
+              <li class="list-inline-item">
+
+                <a href="#">Contact</a>
+
+              </li>
+
+            </ul>
+
+          </nav>
+
+          <div class="socials-a">
+
+            <ul class="list-inline">
+
+              <li class="list-inline-item">
+
+                <a href="#">
+
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+
+                </a>
+
+              </li>
+
+              <li class="list-inline-item">
+
+                <a href="#">
+
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+
+                </a>
+
+              </li>
+
+              <li class="list-inline-item">
+
+                <a href="#">
+
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+
+                </a>
+
+              </li>
+
+              <li class="list-inline-item">
+
+                <a href="#">
+
+                  <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+
+                </a>
+
+              </li>
+
+              <li class="list-inline-item">
+
+                <a href="#">
+
+                  <i class="fa fa-dribbble" aria-hidden="true"></i>
+
+                </a>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="copyright-footer">
+
+            <p class="copyright color-text-a">
+
+              &copy; Copyright
+
+              <span class="color-a">TOURS</span> All Rights Reserved.
+
+            </p>
+
+          </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+		
+		
+	
+		
+
+</body>
+</html>

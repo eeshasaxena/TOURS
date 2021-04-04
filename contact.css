@@ -1,0 +1,107 @@
+body
+{
+	font-family: Montserrat,sans-serif;
+	}
+.navbar
+{
+   margin-bottom:0px;
+   margin-radius:0px;
+}
+#header
+{
+    height: 70px;
+    font-size: 20px;
+    margin-bottom:0px;
+}
+
+/* MAIN */
+.main
+{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.quoted-contact
+{
+	border-left:pink solid 4px;
+	padding:10px;
+	padding-bottom:20px;
+	height:auto;
+	font-size:15px;
+	margin-bottom:20px;
+}
+.left-form
+{
+	width:50%;
+	padding:10px;
+	float:left;
+	height:auto
+}
+.right-content
+{
+	width:40%;
+	padding:10px;
+	float:right;
+}
+	
+input[type=text],input[type=email]
+{
+  width: 48%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+	
+ textarea,#subject
+{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.sec1,.sec2,.sec3
+{
+	width:100%;
+	margin-bottom:20px;
+}
+.send
+{
+	width:40%;
+	font-size:18px;
+	border:black solid;
+	background-color:black;
+	color:white;
+	border-radius:15px;
+}
+.send:hover
+{
+	background-color:white;
+	color:black;
+}
+.container
+{
+	margin-left:35px;
+}
+	
+
+ h1
+{
+	color:black;
+	
+	
+}
+/* ...........................MESSAGES.........................*/
+.messages
+{
+	text-align:center;
+	margin:20px;
+}
+	
