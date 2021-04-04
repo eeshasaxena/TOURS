@@ -1,0 +1,293 @@
+body
+{
+    background-color: #E6E6E6;
+}
+#nivo
+{
+    margin-top: 0px;
+}
+.navbar
+{
+   margin-bottom:0px;
+   margin-radius:0px;
+}
+#header
+{
+    height: 70px;
+    font-size: 20px;
+    margin-bottom:0px;
+}
+#quote
+{
+        
+    font-size: 45px;
+    margin: 50px;
+    text-align: center;
+    color: black;
+    font-family: 'Lobster', cursive;
+}
+.well
+{
+    background-color: white;
+}
+#myCarousel
+{
+    margin-top: 0px;
+   
+}
+
+.title-box
+{
+    width:50%;
+    font-size: 75px;
+    font-family: 'Roboto Slab', serif;
+    
+}
+.title-link
+{
+    font-size: 16px;
+    float:right;
+    color: #333;
+}
+            
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.con {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: 350px;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.overlay {
+  opacity: 1;}
+
+/*login and sign up*/
+
+          .modal {
+           display: none; /* Hidden by default */
+           position: fixed; /* Stay in place */
+           z-index: 2; /* Sit on top */
+           left: 0;
+           top: 0;
+           width: 100%; /* Full width */
+           height: 100%; /* Full height */
+           overflow: auto; /* Enable scroll if needed */
+           background-color: rgb(0,0,0); /* Fallback color */
+           background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+           padding-top: 30px;
+         }
+
+         /* Modal Content/Box */
+         .modal-content {
+           background-color: #fefefe;
+           margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+           border: 1px solid #888;
+           width: 80%; /* Could be more or less, depending on screen size */
+         }
+         /* The Close Button (x) */
+        .close {
+          position: absolute;
+          right: 25px;
+          top: 0;
+          color: #000;
+          font-size: 35px;
+          font-weight: bold;
+          margin: 10px;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: red;
+          cursor: pointer;
+        }
+        .form-control
+        {
+            width: 60%;
+            border: none;
+            
+        }
+        #popup
+        {
+            //border: solid;
+            height: 500px;
+            padding: 50px;
+        }
+         #popup2
+        {
+            //border: solid;
+            height: 700px;
+            padding: 50px;
+        }
+        #leftpopup
+        {
+            //border: solid;
+            width:40%;
+            float:left;
+            height: auto;
+        }
+           #rightpopup1
+        {
+             //border: solid;
+            width:40%;
+            float:left;
+            height: auto;
+            margin-left: 80px; 
+            margin-top: 200px;
+        }
+        #rightpopup
+        {
+             //border: solid;
+            width:40%;
+            float:left;
+            height: auto;
+            margin-left: 80px; 
+        }
+        #leftpopup1
+        {
+            width:40%;
+            float:left;
+            height: auto;
+            margin-left: 80px;  
+        }
+        #popupbtn
+        {
+             background-color: black;
+             color: white;
+             border : black 2px solid;
+             width: 100px;
+             height: 30px;
+             margin-top: 10px;
+             border-radius: 15px; 
+        }
+        #popupbtn:hover
+        {
+            background-color: white;
+            color: black;
+        }
+        .map
+        {
+            width: 80%;
+            //border: solid;
+            float:left; 
+            height: 300px;
+            margin-left: 70px;
+        }
+        .mapcontainer_equi
+        {
+            width: 100%;
+            height: 500px;
+            //margin-top: 60px;
+            //border: solid;
+            //background-image: url('bg1.jpg');
+        }
+       
+        .mapael .map {
+            position: relative;
+        }
+
+        .mapael .mapTooltip {
+            position: absolute;
+            background-color: #fff;
+            moz-opacity: 0.70;
+            opacity: 0.70;
+            filter: alpha(opacity=70);
+            border-radius: 10px;
+            padding: 10px;
+            z-index: 1000;
+            max-width: 200px;
+            display: none;
+            color: #343434;
+        }
+        .content
+        {
+            background: url('bg5.jpg') no-repeat;
+            width: 800px;
+            box-shadow: 10px 10px 5px grey;
+            padding: 15px;
+            float:right;
+            margin-top: 50px;
+        }
+        #heritage
+        {
+            margin-top: 20px;
+        }
+/*........................................SEARCH BOX...........................*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+.se-box
+{
+	border:#C4C4C2 solid;
+	width:100%;
+	margin-top:20px;
+	margin-bottom:20px;	
+	background-color:#C4C4C2;
+	text-align:center;
+}
+.search {
+  width:90%;
+  font-size:20px;
+  text-align:center;
+  margin:40px;
+  display: flex;
+  
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid black;
+  border-right: none;
+  padding: 5px;
+  height: 45px;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 45px;
+  border: 1px solid black;
+  background: black;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+
+            

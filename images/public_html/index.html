@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+--><html>
+    <head>
+        <title>Tours|Home</title>
+        
+    
+        
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link href="css.css" rel="stylesheet">
+        
+         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            
+            <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+            
+          
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
+            charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js" charset="utf-8"></script>  
+    <script src="jquery.mapael.js" charset="utf-8"></script>
+    <script src="maps/world_countries.js" charset="utf-8"></script>
+    <script src="maps/world_countries_mercator.js" charset="utf-8"></script>
+    <script src="maps/world_countries_miller.js" charset="utf-8"></script>
+ 
+      <script>
+            // toggle between login and signup
+             $(document).ready(function()
+	   {
+	     $('#id01').hide();
+                    $('#id01 a,#id02 a').click(function(){
+                        $('#id01,#id02').toggle();
+             });     
+             var getElemID = function(elem) {
+                // Show element ID
+                return $(elem.node).attr("data-id");
+            };
+            $(".mapcontainer_equi").mapael({
+                map: {
+                    name: "world_countries",
+                    defaultArea: {
+                        tooltip: {
+                            content: getElemID
+                        }
+                    }
+                }
+            });
+		  
+	   });
+            // Get the modal
+            var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+            
+            </script>
+    </head>
+    <body >
+        <div id="maindiv" style="height: 2500px;">
+        <!--<div class="container-fluid">-->
+        <div id="header">   
+        <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                         <a class="navbar-brand" href="#">TOURS</a>
+                                          <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                                data-target="#mymenu">
+                                              
+                                         <span class="icon-bar"></span>
+                                         <span class="icon-bar"></span>
+                                         <span class="icon-bar"></span>
+                                          </button>
+                    </div>
+                                         <div class="collapse navbar-collapse" id="mymenu">
+                                         <ul class="nav navbar-nav navbar-right">
+                                         <li><a href="index.html">Home</a></li>
+                                         <li><a href="#">About</a></li>
+                                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Packages
+                                        <span class="caret"></span>
+                                        </a>
+                                         <ul class="dropdown-menu">
+                                        <li><a href="#">Trekking</a></li>
+                                        <li><a href="#">Group Trips</a></li>
+                                        <li><a href="#">Pilgrimage</a></li>
+                                        <li><a href="#">Customized</a></li>
+                                        </ul> 
+                                         </li>
+                                         <li><a href="#">Contact</a></li>
+                                         <li><a href="#">Gallery</a></li>
+                                         <li><a onclick="document.getElementById('id01').style.display='block'"
+                                          style="width:auto;"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+                                         
+                                         </ul>
+                                         </div>
+                </div>
+        </nav></div>
+        <!--sign up-->
+         <div id="id02" class="modal">
+            
+            <div class="modal-content animate container-inverse " id="popup2">
+               
+                <span onclick="document.getElementById('id02').style.display='none'" 
+                  class="close" title="Close Modal">&times;</span>
+                
+                  <div id="leftpopup1">
+                      <h2><b>Sign up</b></h2>
+                    <form>
+                     <div class="form-group">
+                      <label for="InputName"></label>
+                      <input type="text" class="form-control" id="InputName" placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="InputUsername"></label>
+                      <input type="text" class="form-control" id="InputUsername" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                      <label for="InputPassword"></label>
+                      <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+                    </div>
+                        <div class="form-group">
+                      <label for="reInputPassword"></label>
+                      <input type="password" class="form-control" id="reInputPassword" placeholder="Confirm Password">
+                    </div>
+                        <div class="form-group">
+                      <label for="country"></label>
+                      <select name="country" id="country" class='form-control'>
+                         <option value="0" label="Select a country ... " selected="selected">Select a country ... </option>
+                      
+                        <optgroup id="country-optgroup-Americas" label="Americas">
+                            <option value="AI" label="Anguilla">Anguilla</option>
+                            <option value="AG" label="Antigua and Barbuda">Antigua and Barbuda</option>
+                            <option value="AR" label="Argentina">Argentina</option>
+                            <option value="AW" label="Aruba">Aruba</option>
+                            <option value="BS" label="Bahamas">Bahamas</option>
+                            <option value="BB" label="Barbados">Barbados</option>
+                            <option value="BZ" label="Belize">Belize</option>
+                            <option value="BM" label="Bermuda">Bermuda</option>
+                            <option value="BO" label="Bolivia">Bolivia</option>
+                            <option value="BR" label="Brazil">Brazil</option>
+                            <option value="VG" label="British Virgin Islands">British Virgin Islands</option>
+                            <option value="CA" label="Canada">Canada</option>
+                            <option value="KY" label="Cayman Islands">Cayman Islands</option>
+                            <option value="CL" label="Chile">Chile</option>
+                            <option value="CO" label="Colombia">Colombia</option>
+                            <option value="CR" label="Costa Rica">Costa Rica</option>
+                            <option value="CU" label="Cuba">Cuba</option>
+                            <option value="DM" label="Dominica">Dominica</option>
+                            <option value="DO" label="Dominican Republic">Dominican Republic</option>
+                            <option value="EC" label="Ecuador">Ecuador</option>
+                            <option value="SV" label="El Salvador">El Salvador</option>
+                            <option value="FK" label="Falkland Islands">Falkland Islands</option>
+                            <option value="GF" label="French Guiana">French Guiana</option>
+                            <option value="GL" label="Greenland">Greenland</option>
+                            <option value="GD" label="Grenada">Grenada</option>
+                            <option value="GP" label="Guadeloupe">Guadeloupe</option>
+                            <option value="GT" label="Guatemala">Guatemala</option>
+                            <option value="GY" label="Guyana">Guyana</option>
+                            <option value="HT" label="Haiti">Haiti</option>
+                            <option value="HN" label="Honduras">Honduras</option>
+                            <option value="JM" label="Jamaica">Jamaica</option>
+                            <option value="MQ" label="Martinique">Martinique</option>
+                            <option value="MX" label="Mexico">Mexico</option>
+                            <option value="MS" label="Montserrat">Montserrat</option>
+                            <option value="AN" label="Netherlands Antilles">Netherlands Antilles</option>
+                            <option value="NI" label="Nicaragua">Nicaragua</option>
+                            <option value="PA" label="Panama">Panama</option>
+                            <option value="PY" label="Paraguay">Paraguay</option>
+                            <option value="PE" label="Peru">Peru</option>
+                            <option value="PR" label="Puerto Rico">Puerto Rico</option>
+                            <option value="BL" label="Saint Barthélemy">Saint Barthélemy</option>
+                            <option value="KN" label="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                            <option value="LC" label="Saint Lucia">Saint Lucia</option>
+                            <option value="MF" label="Saint Martin">Saint Martin</option>
+                            <option value="PM" label="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                            <option value="VC" label="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                            <option value="SR" label="Suriname">Suriname</option>
+                            <option value="TT" label="Trinidad and Tobago">Trinidad and Tobago</option>
+                            <option value="TC" label="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                            <option value="VI" label="U.S. Virgin Islands">U.S. Virgin Islands</option>
+                            <option value="US" label="United States">United States</option>
+                            <option value="UY" label="Uruguay">Uruguay</option>
+                            <option value="VE" label="Venezuela">Venezuela</option>
+                        </optgroup>
+                        <optgroup id="country-optgroup-Asia" label="Asia">
+                            <option value="AF" label="Afghanistan">Afghanistan</option>
+                            <option value="AM" label="Armenia">Armenia</option>
+                            <option value="AZ" label="Azerbaijan">Azerbaijan</option>
+                            <option value="BH" label="Bahrain">Bahrain</option>
+                            <option value="BD" label="Bangladesh">Bangladesh</option>
+                            <option value="BT" label="Bhutan">Bhutan</option>
+                            <option value="BN" label="Brunei">Brunei</option>
+                            <option value="KH" label="Cambodia">Cambodia</option>
+                            <option value="CN" label="China">China</option>
+                            <option value="CY" label="Cyprus">Cyprus</option>
+                            <option value="GE" label="Georgia">Georgia</option>
+                            <option value="HK" label="Hong Kong SAR China">Hong Kong SAR China</option>
+                            <option value="IN" label="India">India</option>
+                            <option value="ID" label="Indonesia">Indonesia</option>
+                            <option value="IR" label="Iran">Iran</option>
+                            <option value="IQ" label="Iraq">Iraq</option>
+                            <option value="IL" label="Israel">Israel</option>
+                            <option value="JP" label="Japan">Japan</option>
+                            <option value="JO" label="Jordan">Jordan</option>
+                            <option value="KZ" label="Kazakhstan">Kazakhstan</option>
+                            <option value="KW" label="Kuwait">Kuwait</option>
+                            <option value="KG" label="Kyrgyzstan">Kyrgyzstan</option>
+                            <option value="LA" label="Laos">Laos</option>
+                            <option value="LB" label="Lebanon">Lebanon</option>
+                            <option value="MO" label="Macau SAR China">Macau SAR China</option>
+                            <option value="MY" label="Malaysia">Malaysia</option>
+                            <option value="MV" label="Maldives">Maldives</option>
+                            <option value="MN" label="Mongolia">Mongolia</option>
+                            <option value="MM" label="Myanmar [Burma]">Myanmar [Burma]</option>
+                            <option value="NP" label="Nepal">Nepal</option>
+                            <option value="NT" label="Neutral Zone">Neutral Zone</option>
+                            <option value="KP" label="North Korea">North Korea</option>
+                            <option value="OM" label="Oman">Oman</option>
+                            <option value="PK" label="Pakistan">Pakistan</option>
+                            <option value="PS" label="Palestinian Territories">Palestinian Territories</option>
+                            <option value="YD" label="People's Democratic Republic of Yemen">People's Democratic Republic of Yemen</option>
+                            <option value="PH" label="Philippines">Philippines</option>
+                            <option value="QA" label="Qatar">Qatar</option>
+                            <option value="SA" label="Saudi Arabia">Saudi Arabia</option>
+                            <option value="SG" label="Singapore">Singapore</option>
+                            <option value="KR" label="South Korea">South Korea</option>
+                            <option value="LK" label="Sri Lanka">Sri Lanka</option>
+                            <option value="SY" label="Syria">Syria</option>
+                            <option value="TW" label="Taiwan">Taiwan</option>
+                            <option value="TJ" label="Tajikistan">Tajikistan</option>
+                            <option value="TH" label="Thailand">Thailand</option>
+                            <option value="TL" label="Timor-Leste">Timor-Leste</option>
+                            <option value="TR" label="Turkey">Turkey</option>
+                            <option value="TM" label="Turkmenistan">Turkmenistan</option>
+                            <option value="AE" label="United Arab Emirates">United Arab Emirates</option>
+                            <option value="UZ" label="Uzbekistan">Uzbekistan</option>
+                            <option value="VN" label="Vietnam">Vietnam</option>
+                            <option value="YE" label="Yemen">Yemen</option>
+                        </optgroup>
+                        <optgroup id="country-optgroup-Europe" label="Europe">
+                            <option value="AL" label="Albania">Albania</option>
+                            <option value="AD" label="Andorra">Andorra</option>
+                            <option value="AT" label="Austria">Austria</option>
+                            <option value="BY" label="Belarus">Belarus</option>
+                            <option value="BE" label="Belgium">Belgium</option>
+                            <option value="BA" label="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                            <option value="BG" label="Bulgaria">Bulgaria</option>
+                            <option value="HR" label="Croatia">Croatia</option>
+                            <option value="CY" label="Cyprus">Cyprus</option>
+                            <option value="CZ" label="Czech Republic">Czech Republic</option>
+                            <option value="DK" label="Denmark">Denmark</option>
+                            <option value="DD" label="East Germany">East Germany</option>
+                            <option value="EE" label="Estonia">Estonia</option>
+                            <option value="FO" label="Faroe Islands">Faroe Islands</option>
+                            <option value="FI" label="Finland">Finland</option>
+                            <option value="FR" label="France">France</option>
+                            <option value="DE" label="Germany">Germany</option>
+                            <option value="GI" label="Gibraltar">Gibraltar</option>
+                            <option value="GR" label="Greece">Greece</option>
+                            <option value="GG" label="Guernsey">Guernsey</option>
+                            <option value="HU" label="Hungary">Hungary</option>
+                            <option value="IS" label="Iceland">Iceland</option>
+                            <option value="IE" label="Ireland">Ireland</option>
+                            <option value="IM" label="Isle of Man">Isle of Man</option>
+                            <option value="IT" label="Italy">Italy</option>
+                            <option value="JE" label="Jersey">Jersey</option>
+                            <option value="LV" label="Latvia">Latvia</option>
+                            <option value="LI" label="Liechtenstein">Liechtenstein</option>
+                            <option value="LT" label="Lithuania">Lithuania</option>
+                            <option value="LU" label="Luxembourg">Luxembourg</option>
+                            <option value="MK" label="Macedonia">Macedonia</option>
+                            <option value="MT" label="Malta">Malta</option>
+                            <option value="FX" label="Metropolitan France">Metropolitan France</option>
+                            <option value="MD" label="Moldova">Moldova</option>
+                            <option value="MC" label="Monaco">Monaco</option>
+                            <option value="ME" label="Montenegro">Montenegro</option>
+                            <option value="NL" label="Netherlands">Netherlands</option>
+                            <option value="NO" label="Norway">Norway</option>
+                            <option value="PL" label="Poland">Poland</option>
+                            <option value="PT" label="Portugal">Portugal</option>
+                            <option value="RO" label="Romania">Romania</option>
+                            <option value="RU" label="Russia">Russia</option>
+                            <option value="SM" label="San Marino">San Marino</option>
+                            <option value="RS" label="Serbia">Serbia</option>
+                            <option value="CS" label="Serbia and Montenegro">Serbia and Montenegro</option>
+                            <option value="SK" label="Slovakia">Slovakia</option>
+                            <option value="SI" label="Slovenia">Slovenia</option>
+                            <option value="ES" label="Spain">Spain</option>
+                            <option value="SJ" label="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                            <option value="SE" label="Sweden">Sweden</option>
+                            <option value="CH" label="Switzerland">Switzerland</option>
+                            <option value="UA" label="Ukraine">Ukraine</option>
+                            <option value="SU" label="Union of Soviet Socialist Republics">Union of Soviet Socialist Republics</option>
+                            <option value="GB" label="United Kingdom">United Kingdom</option>
+                            <option value="VA" label="Vatican City">Vatican City</option>
+                            <option value="AX" label="Åland Islands">Åland Islands</option>
+                        </optgroup>
+                        
+                      </select>
+                    </div><br>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="Check1">
+                      <label class="form-check-label" for="exampleCheck1">Confirm details</label>
+                    </div><br>
+                    <button type="submit" id="popupbtn">Register</button>
+                    </form><br>
+                    Already a user? <a> Login here</a>
+                </div>
+                <div id="rightpopup1">
+                    <img src="signup-image.jpg">
+                </div>
+            </div>
+       </div>
+         <!-- login modal popup -->   
+        <div id="id01" class="modal">
+            
+            <div class="modal-content animate container-inverse " id="popup">
+               
+                <span onclick="document.getElementById('id01').style.display='none'" 
+                  class="close" title="Close Modal">&times;</span>
+                
+                  <div id="leftpopup">
+                    <img src="signin-image.jpg">
+                  </div>
+                
+                <div id="rightpopup">
+                    
+                      <h2><b>Login</b></h2>
+                    <form>
+                    <div class="form-group">
+                      <label for="InputUsername"></label>
+                      <input type="text" class="form-control" id="InputUsername" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                      <label for="InputPassword"></label>
+                      <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+                    </div><br>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="Check1">
+                      <label class="form-check-label" for="exampleCheck1">Remember me </label>
+                    </div><br>
+                    <button type="submit" id="popupbtn">Submit</button>
+                    </form><br>
+                      Don't have an account ? <a> signup now</a>
+                </div>
+                
+            </div>
+            </div>
+        
+          
+        
+         <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: 0px;">
+             
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="timg1.jpg" style="width:100%; height:350px;" alt="Los Angeles">
+              </div>
+
+              <div class="item">
+                <img src="timg2.jpg" style="width:100%; height:350px;" alt="Chicago">
+              </div>
+
+              <div class="item">
+                <img src="timg3.jpg" style="width:100%; height:350px;" alt="New York">
+              </div>
+                
+              <div class="item">
+                <img src="timg4.jpg" style="width:100%; height:350px;" alt="New York">
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+         </div>
+		 
+		 <!-----------------------------------------------------------------------------------------------
+		 -------------------------------------------------------------------------------------------------
+											SEARCH BOX
+		 -------------------------------------------------------------------------------------------------
+		 ------------------------------------------------------------------------------------------------->
+		<div class="se-box">
+		   <div class="search">
+		   <h1> Discover your next holiday destination</h1>
+			  <input type="text" class="searchTerm" placeholder="Search your destination">
+			  <button type="submit" class="searchButton">
+				<i class="fa fa-search"></i>
+			 </button>
+		   </div>
+		</div>
+        
+         
+         
+         
+         <div class="container">
+                <div>
+                    <h1 style="font-size: 35px;"><b>Why Choose Us?</b></h2>
+                  <h4>More Than 20 Years Of Experience, Variety Of Tour Packages, Best Deals 
+                      And Personalised Services</h4><br>
+                
+             <div class="row text-center">
+                 <div class="col-md-4 " style='height: 400px;'>
+                     <img src="images/img1.PNG" class="image-thumbnail" ><br>
+                     <h2>Experience</h2>
+                     <p>Our dedicated travel team diligently works round-the-clock to design
+                         the best travel experiences for the customers.</p>
+                 </div>
+                 <div class="col-md-4 " style='height: 400px;'>
+                     <img src="img2.PNG"><br>
+                     <h2>Positive Customer Feedback</h2>
+                     <p>We're truly humbled to have received volumes of positive customer feedback 
+                         for our services. This appreciation from our prestigious clients is more 
+                         valuable than any award for us. </p>
+                         
+                 </div>
+                 <div class="col-md-4 " style='height: 400px;'>
+                     <img src="img4.PNG"><br>
+                     <h2>Recognition</h2>
+                     <p>We are proud to be accredited by major tour and travel associations in 
+                         India and world like IATA, IATO, TAAI, IMF, MOT 
+                         (Ministry of Tourism, Govt of India), and TOFT. </p>
+                 </div>
+             </div>
+               
+              </div></div>
+             
+          <section class="section-news section-t8">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-wrap d-flex justify-content-between">
+            <div class="title-box">
+                <h2 class="title-a"><b>Latest Tours</b></h2>
+            </div>
+            <div class="title-link">
+              <a href="blog-grid.html">All Tours
+                <ion-icon name="chevron-forward-outline" ></ion-icon>
+              </a>
+            </div>
+              
+          </div>
+        </div>
+      </div><br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="con">
+  <img src="t2.jpg" alt="Kochi img" class="image">
+  <div class="overlay">Kochi,Kerela,India</div>
+</div>
+            </div>
+            <div class="col-md-4">
+                <div class="con">
+  <img src="t4.jpg" alt="Hawaii img" class="image">
+  <div class="overlay">Hawaii, USA</div>
+</div>
+            </div>
+            <div class="col-md-4">
+                <div class="con">
+  <img src="t5.jpg" alt="Goa img" class="image">
+  <div class="overlay">Goa,India</div>
+</div>
+            </div>
+        </div>
+     
+    </div></section>
+         
+       </div>
+	   
+	   
+	<!-- ------------------------------------------------------------------------------------------------------
+			------------------------------------------------------------------------------------------------------
+											FOOTER
+			------------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------->
+
+<section style="background-color:black;color:white;">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-sm-12 col-md-4">
+
+          <div class="widget-a">
+
+            <div class="w-header-a">
+
+              <h3 class="w-title-a text-brand">TOURS</h3>
+
+            </div>
+
+            <div class="w-body-a">
+
+              <p class="w-text-a color-text-a">
+
+                Experience the most amazing places on Earth just some buttons away from you!
+
+              </p>
+
+            </div>
+
+            <div class="w-footer-a">
+
+              <ul class="list-unstyled">
+
+                <li class="color-a">
+
+                  <span class="color-text-a"><span class="glyphicon glyphicon-earphone"></span> Phone: </span> +91 7378498144</li>
+
+                <li class="color-a">
+
+                  <span class="color-text-a"><span class="glyphicon glyphicon-envelope" id="envelope"></span> Email: </span> eeshasaxena2408@gmail.com</li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-sm-12 col-md-4 section-md-t3">
+
+          <div class="widget-a">
+
+            <div class="w-header-a">
+
+              <h3 class="w-title-a text-brand">The Company</h3>
+
+            </div>
+
+            <div class="w-body-a">
+
+              <div class="w-body-a">
+
+                <ul class="list-unstyled">
+
+
+                  <li class="item-list-a">
+
+                    <a href="#"> <span class="glyphicon glyphicon-menu-right"></span> Legal</a>
+
+                  </li>
+
+                  <li class="item-list-a">
+
+                    <a href="#"> <span class="glyphicon glyphicon-menu-right"></span> Agent Admin</a>
+
+                  </li>
+
+                  
+
+                  <li class="item-list-a">
+
+                    <a href="#"><span class="glyphicon glyphicon-menu-right"></span> Affiliate</a>
+
+                  </li>
+
+                  <li class="item-list-a">
+
+                    <a href="#"><span class="glyphicon glyphicon-menu-right"></span> Privacy Policy</a>
+
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-sm-12 col-md-4 section-md-t3">
+
+          <div class="widget-a">
+
+            <div class="w-header-a">
+
+              <h3 class="w-title-a text-brand">International sites</h3>
+
+            </div>
+
+            <div class="w-body-a">
+
+              <ul class="list-unstyled">
+
+                <li class="item-list-a">
+
+                  <a href="italy.html"><span class="glyphicon glyphicon-menu-right"></span> Italy</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                   <a href="#"><span class="glyphicon glyphicon-menu-right"></span> China</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <a href="#"><span class="glyphicon glyphicon-menu-right"></span> Hong Kong</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <a href="#"><span class="glyphicon glyphicon-menu-right"></span> Argentina</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                 <a href="#"><span class="glyphicon glyphicon-menu-right"></span> Singapore</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <a href="#"><span class="glyphicon glyphicon-menu-right"></span> Africa</a>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+</section>
+  
+
+  
+	<footer style="background-color:black;color:white;">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-12">
+
+          <nav class="nav-footer">
+
+            <ul class="list-inline">
+
+              <li class="list-inline-item">
+
+                <a href="index.html">Home</a>
+
+              </li>
+
+              <li class="list-inline-item">
+
+                <a href="#">About</a>
+
+              </li>
+
+              <li class="list-inline-item">
+
+                <a href="#">Property</a>
+
+              </li>
+
+
+              <li class="list-inline-item">
+
+                <a href="#">Contact</a>
+
+              </li>
+
+            </ul>
+
+          </nav>
+
+          <div class="socials-a">
+
+            <ul class="list-inline">
+
+              <li class="list-inline-item">
+
+                <a href="#">
+
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+
+                </a>
+
+              </li>
+
+              <li class="list-inline-item">
+
+                <a href="#">
+
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+
+                </a>
+
+              </li>
+
+              <li class="list-inline-item">
+
+                <a href="#">
+
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+
+                </a>
+
+              </li>
+
+              <li class="list-inline-item">
+
+                <a href="#">
+
+                  <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+
+                </a>
+
+              </li>
+
+              <li class="list-inline-item">
+
+                <a href="#">
+
+                  <i class="fa fa-dribbble" aria-hidden="true"></i>
+
+                </a>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="copyright-footer">
+
+            <p class="copyright color-text-a">
+
+              &copy; Copyright
+
+              <span class="color-a">TOURS</span> All Rights Reserved.
+
+            </p>
+
+          </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+    </body>
+</html>
